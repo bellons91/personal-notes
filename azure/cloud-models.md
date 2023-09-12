@@ -7,6 +7,7 @@ tags: azure, cloud, azure-certifications/az900
 The cloud models define the deployment type of cloud resources.
 
 ## Private Cloud
+
 It’s a cloud used by a single entity.
 
 The IT department has almost full control of the cloud, and resources are not shared with other customers.
@@ -32,6 +33,7 @@ Everyone can purchase services and resources, and the datacenter is shared.
 - Organizations don’t have complete control over resources and security
 
 ## Hybrid cloud
+
 You can have part of the cloud as private and expand it with public services (in case of immediate needs).
 
 You can choose which services can be in the private cloud and which services can be public.

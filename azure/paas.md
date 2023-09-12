@@ -12,4 +12,3 @@ The cloud provider maintains:
 - operating system (security, licences, patches)
 - development tools
 - databases
-

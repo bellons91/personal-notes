@@ -24,5 +24,8 @@
   ],
   "files.exclude": {
     "_site/**": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": true
   }
 }

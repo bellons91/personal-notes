@@ -3,7 +3,7 @@ tags: azure, azure-certifications/az900, cost-optimization, azure-blob-storage
 ---
 
 # Costs optimizations on Azure Blob Storage
- 
+
 In [[Azure Blob Storage]], you can use different storage tiers:
 
 ## Hot tier

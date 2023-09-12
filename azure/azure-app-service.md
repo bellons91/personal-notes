@@ -4,7 +4,7 @@ tags: azure, cloud, azure-certifications/az900
 
 # Azure App Service
 
-Build and host web apps, background jobs, mobile back-ends, and RESTful APIs **without managing infrastructure**. 
+Build and host web apps, background jobs, mobile back-ends, and RESTful APIs **without managing infrastructure**.
 
 It offers automatic scaling and high availability.
 

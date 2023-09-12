@@ -6,4 +6,4 @@ tags: azure, cloud, azure-certifications/az900 containers
 
 AKS is a container **orchestration** service.
 
-It allows you to manage the lifecicle of a conainer.
+It allows you to manage the lifecicle of a container.
