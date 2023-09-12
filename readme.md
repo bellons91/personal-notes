@@ -4,7 +4,7 @@
 
 ## Most important sections
 
-- Azure Certifications:
+- Azure Certifications
   - [[az-900]]
 
 
