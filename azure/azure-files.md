@@ -13,3 +13,5 @@ You can create file shares using Azure CLI and PowerShell commands.
 Files can be accessed using Azure Portal or Azure Storage Explorer.
 
 Azure files support high availability.
+
+This service provides a list of endpoints available at  https://{storage-account-name}.file.core.windows.net

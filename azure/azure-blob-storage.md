@@ -18,6 +18,8 @@ Blob storage is ideal for:
 
 Objects can be accessed via HTTP or HTTPS, given that every object can be referenced using a specific URL.
 
+This service provides a list of endpoints available at  https://{storage-account-name}.blob.core.windows.net
+
 ## Blob Storage tiers
 
 To manage costs better you have to pick the right storage tier, depending on the expected usage.
