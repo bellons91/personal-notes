@@ -3,7 +3,6 @@
   "editor.minimap.enabled": false,
   "editor.wrappingIndent": "indent",
   "editor.overviewRulerBorder": false,
-  "foam.edit.linkReferenceDefinitions": "withoutExtensions",
   "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
   "[markdown]": {
     "editor.quickSuggestions": {
