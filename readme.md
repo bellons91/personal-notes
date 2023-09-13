@@ -2,7 +2,7 @@
 
 👋 Welcome to your new my personal notes, powered by Foam!
 
-The repository can be found on [[https://github.com/bellons91/personal-notes|GitHub]].
+The repository can be found on [GitHub](https://github.com/bellons91/personal-notes).
 
 ## Most important sections
 

@@ -20,7 +20,7 @@ Supported services:
 
 - [[azure-blob-storage]]
 - [[azure-queue-storage]]
-- [[Azure Table Storage]]
+- [[azure-table-storage]]
 - [[azure-files]]
 
 It supports all the redundancy options:
