@@ -1,5 +1,5 @@
 ---
-tags: azure,   azure-certifications/az900
+tags: azure, azure-certifications/az900
 ---
 
 # Azure Regions
