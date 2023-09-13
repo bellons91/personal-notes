@@ -19,9 +19,9 @@ Recommended for the most basic scenarios.
 Supported services:
 
 - [[azure-blob-storage]]
-- [[Azure Queue Storage]]
+- [[azure-queue-storage]]
 - [[Azure Table Storage]]
-- [[Azure Files]]
+- [[azure-files]]
 
 It supports all the redundancy options:
 
@@ -51,7 +51,7 @@ For file shares only.
 
 Recommended for enterprise or high-performance scale applications.
 
-Is available only for [[Azure Files]].
+Is available only for [[azure-files]].
 
 It supports:
 
