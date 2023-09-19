@@ -28,6 +28,8 @@ Azure AD can handle several types of authentication:
 - passwordless authentication (eg, Windows Hello for Business)
 - [[fido2-authentication]]
 
+You can finally manage users from external sources by using [[azure-ad-external-identities]].
+
 ## Conditional Access
 
 Conditional Access is a tool that Azure Active Directory uses to **allow (or deny) access to resources** based on **identity signals**. These signals include who the user is, where the user is, and what device the user is requesting access from.
