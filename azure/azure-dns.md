@@ -8,7 +8,7 @@ It's a [[DNS]], so it provides name resolution by using Microsoft Azure infrastr
 
 Azure DNS uses [[anycast networking]], so each [[DNS query]] is answered by the closest available DNS server to provide fast performance and high availability for your domain.
 
-You can use [[Azure RBAC]] to controll access to specific actions.
+You can use [[azure-rbac]] to controll access to specific actions.
 
 All the operations on the DNS are tracked and logged, so that you can find errors details when troubleshooting.
 
