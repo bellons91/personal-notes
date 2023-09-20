@@ -22,7 +22,7 @@ Finally, it adds security to the **network connectivity** by monitoring endpoint
 
 ## Hybrid cloud
 
-Microsoft Defender can work with hybrid environments, where part of the infrastructure is stored in on-premises servers. **Defender for Cloud** can be deployed on on-prem machines using [[Azure Arc]].
+Microsoft Defender can work with hybrid environments, where part of the infrastructure is stored in on-premises servers. **Defender for Cloud** can be deployed on on-prem machines using [[azure-arc]].
 
 ## Multicloud
 
