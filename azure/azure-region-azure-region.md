@@ -1,2 +1,0 @@
-# azure-region|Azure Region
-

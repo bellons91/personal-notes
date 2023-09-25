@@ -1,2 +1,0 @@
-# azure-virtual-machines|VMs
-
