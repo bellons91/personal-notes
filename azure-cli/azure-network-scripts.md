@@ -9,7 +9,7 @@ This page lists some scripts useful for operating on [[azure-virtual-network]].
 
 ## List Network Security Groups
 
-With this script you can list the [[azure-virtual-network|network security groups]] that are associated with your VM:
+With this script you can list the [[azure-virtual-network]] that are associated with your VM:
 
 ```cli
 az network nsg list \
@@ -71,5 +71,3 @@ az network nsg rule create \
   --destination-port-range 80 \
   --access Allow
 ```
-
-

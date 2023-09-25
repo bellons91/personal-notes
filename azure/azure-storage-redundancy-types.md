@@ -30,7 +30,7 @@ Suppose a disaster such as fire or flooding occurs within the data center. In th
 
 ### Zone-Redundant Storage (ZRS)
 
-ZRS replicates your Azure Storage data **synchronously** across **three [[azure-availability-zones|availability zones]] in the primary region**.
+ZRS replicates your Azure Storage data **synchronously** across **three [[azure-availability-zones]] in the primary region**.
 
 ZRS provides at least **12 nines of durability** (99.9999999999%).
 

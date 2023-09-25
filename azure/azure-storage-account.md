@@ -25,12 +25,12 @@ Supported services:
 
 It supports all the redundancy options:
 
-- [[azure-storage-redundancy-types#Locally Redundant Storage (LRS)|Locally Redundant Storage (LRS)]]
-- [[azure-storage-redundancy-types#Geo-Redundant Storage (GRS)|Geo-Redundant Storage (GRS)]]
-- [[azure-storage-redundancy-types#Read-Access Geo-Redundant Storage (RA-GRS)|Read-Access Geo-Redundant Storage (RA-GRS)]]
-- [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)|Zone-Redundant Storage (ZRS)]]
-- [[azure-storage-redundancy-types#Geo-Zone-Redundant Storage (GZRS)|Geo-Zone-Redundant Storage (GZRS)]]
-- [[azure-storage-redundancy-types#Read-Access Geo-Zone-Redundant Storage (RA-GZRS)|Read-Access Geo-Zone-Redundant Storage (RA-GZRS)]]
+- Locally Redundant Storage (LRS) (see :[[azure-storage-redundancy-types#Locally Redundant Storage (LRS)]])
+- Geo-Redundant Storage (GRS) (see: [[azure-storage-redundancy-types#Geo-Redundant Storage (GRS)]])
+- Read-Access Geo-Redundant Storage (RA-GRS) (see: [[azure-storage-redundancy-types#Read-Access Geo-Redundant Storage (RA-GRS)]])
+- Zone-Redundant Storage (ZRS) (see: [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)]])
+- Geo-Zone-Redundant Storage (GZRS) (see:[[azure-storage-redundancy-types#Geo-Zone-Redundant Storage (GZRS)]])
+- Read-Access Geo-Zone-Redundant Storage (RA-GZRS) (see: [[azure-storage-redundancy-types#Read-Access Geo-Zone-Redundant Storage (RA-GZRS)]])
 
 ## Premium block blobs
 
@@ -42,8 +42,8 @@ It is available only for [[azure-blob-storage]].
 
 It supports:
 
-- [[azure-storage-redundancy-types#Locally Redundant Storage (LRS)|Locally Redundant Storage (LRS)]]
-- [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)|Zone-Redundant Storage (ZRS)]]
+- Locally Redundant Storage (LRS) (see :[[azure-storage-redundancy-types#Locally Redundant Storage (LRS)]])
+- Zone-Redundant Storage (ZRS) (see: [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)]])
 
 ## Premium file shares
 
@@ -55,11 +55,11 @@ Is available only for [[azure-files]].
 
 It supports:
 
-- [[azure-storage-redundancy-types#Locally Redundant Storage (LRS)|Locally Redundant Storage (LRS)]]
-- [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)|Zone-Redundant Storage (ZRS)]]
+- Locally Redundant Storage (LRS) (see :[[azure-storage-redundancy-types#Locally Redundant Storage (LRS)]])
+- Zone-Redundant Storage (ZRS) (see: [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)]])
 
 ## Premium page blobs
 
 For [[page blobs]] only.
 
-It supports only [[azure-storage-redundancy-types#Locally Redundant Storage (LRS)]]
+It supports only Locally Redundant Storage (LRS)
