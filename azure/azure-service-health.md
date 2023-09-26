@@ -18,6 +18,8 @@ Service Health includes the status of all the services and regions you are using
 
 Useful to learn about outages, maintenance, and other stuff that may impact the services you are using.
 
+After an outage, Service Health provides official incident reports called **root cause analysis (RCA)**, which you can share with stakeholders.
+
 ## Resource Health
 
 Service Health includes the status of all the individual resources you are using.

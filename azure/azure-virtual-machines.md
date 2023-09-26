@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, virtual-machines
+tags: azure, cloud, azure-certifications/az900, virtual-machines, iaas
 ---
 
 # Azure Virtual Machines
@@ -44,5 +44,3 @@ Two ways to define Availability Sets:
 ## Additional resources
 
 Operate on VM using Azure CLI: [[azure-vm-scripts]]
-
-

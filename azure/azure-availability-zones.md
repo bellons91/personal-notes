@@ -20,6 +20,8 @@ Availability Zones are connected through a secure, high-speed network.
 
 ## Azure Services that support Availability Zones
 
+Availability zones are primarily for VMs, managed disks, load balancers, and SQL databases.
+
 Not every Azure Service supports Availability Zones (sometimes, it's not even necessary).
 
 There are 3 categories of service usage:
@@ -27,5 +29,3 @@ There are 3 categories of service usage:
 1. **Zonal services**: a service is pinned to a specific zone. Eg: [[azure-virtual-machines]], IP Addresses;
 2. **Zone-redundant service**: some services are replicated across several zones (eg: [[Azure SQL]]);
 3. **Non-regional services**: some services must be available regardless of the actual location so they span across worldwide zones.
-
-

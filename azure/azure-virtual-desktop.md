@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900
+tags: azure, cloud, azure-certifications/az900, iaas
 ---
 
 # Azure Virtual Desktop
@@ -14,5 +14,3 @@ Advantages:
 - **permission management**: centralize roles and ACL;
 - **secure network**: all the [[azure-virtual-machines]] stored via Azure Virtual Desktop have secure outbond communication;
 - integration with [[azure-active-directory]] using MFA.
-
-
