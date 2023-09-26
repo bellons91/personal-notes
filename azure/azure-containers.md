@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 containers
+tags: azure, cloud, azure-certifications/az900 containers, paas
 ---
 
 # Azure Containers

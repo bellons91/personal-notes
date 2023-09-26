@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, authentication
+tags: azure, cloud, azure-certifications/az900, authentication, paas
 ---
 
 # Azure Active Directory (now EntraID)

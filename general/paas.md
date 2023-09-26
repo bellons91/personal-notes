@@ -12,3 +12,15 @@ The cloud provider maintains:
 - operating system (security, licences, patches)
 - development tools
 - databases
+
+## List of Azure services
+
+- [[microsoft-purview]]
+- Event Hub
+- [[azure-app-service]]
+- [[azure-container-apps]]
+- [[azure-kubernetes-service]]
+- [[azure-active-directory]]
+- [[azure-active-directory-domain-services]]
+
+

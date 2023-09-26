@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900
+tags: azure, cloud, azure-certifications/az900, saas
 ---
 
 # Azure Arc

@@ -13,3 +13,14 @@ Clients are responsible for:
 - data
 - connected devices
 - user policies
+
+
+## List of Azure Services
+
+- Azure DevOps
+- Microsof Sentinel
+- [[azure-arc]]
+- [[azure-advisor]]
+- Azure Backup
+- [[azure-cloud-shell]]
+- 
