@@ -26,6 +26,28 @@ Not every Azure Service supports Availability Zones (sometimes, it's not even ne
 
 There are 3 categories of service usage:
 
-1. **Zonal services**: a service is pinned to a specific zone. Eg: [[azure-virtual-machines]], IP Addresses;
-2. **Zone-redundant service**: some services are replicated across several zones (eg: [[Azure SQL]]);
-3. **Non-regional services**: some services must be available regardless of the actual location so they span across worldwide zones.
+### Zonal Services
+
+A service is pinned to a specific zone. You can combine multiple zonal deployments across different zones to meet high reliability requirements.
+
+**You're responsible for managing data replication** and distributing requests across zones.
+
+If an outage occurs in a single availability zone, **you're responsible for failover** to another availability zone.
+
+A resource can be deployed to a specific, self-selected availability zone to achieve **more stringent latency or performance requirements**.
+
+Eg: [[azure-virtual-machines]], IP Addresses. **Typically supported by [[iaas]]**.
+
+### Zone-redundant service
+
+Some services are replicated across several zones (eg: [[Azure SQL]]); Microsoft manages spreading requests across zones and the replication of data across zones. If an outage occurs in a single availability zone, Microsoft manages failover automatically. **Typically supported by [[paas]]**.
+
+Zone-redundant services replicate the data across multiple zones so that a failure in one zone doesn't affect the high availability of the data.
+
+### Non-regional services (Always-available services)
+
+Some services must be available regardless of the actual location so they span across worldwide zones.
+
+These services must be resilient to zone-wide outages and region-wide outages
+
+Eg: Azure Active Directory
