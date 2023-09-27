@@ -1,5 +1,5 @@
 ---
-tags: dotnet, CSharp, CSV, API
+tags: dotNET, CSharp, CSV, API
 ---
 
 # How to Download Data as CSV File in .NET API

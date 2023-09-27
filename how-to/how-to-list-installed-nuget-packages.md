@@ -1,5 +1,5 @@
 ---
-tags: Csharp, Nuget, DotNet
+tags: Csharp, Nuget, dotNET
 ---
 
 # How to list all the installed NuGet Packages
