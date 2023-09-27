@@ -37,4 +37,4 @@ It creates an array of bytes (`byte[] result`), with the data expected to be par
 
 ## See also
 
-🔗 [How to Read Data From Csv Api Response?](https://notes.code4it.dev/how-to-read-data-from-csv-api-response/)
+[[how-to-read-data-from-csv-api-response]]

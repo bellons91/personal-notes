@@ -44,7 +44,6 @@ string[] allValues = fieldInfos
 Now you can use this method to validate an input:
 
 ```cs
-
 string instance = "league_women";
 
 var allInstances = GetSupportedInstances();

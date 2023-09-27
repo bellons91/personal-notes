@@ -12,10 +12,10 @@ If the cluster is stored on Azure:
 
 First of all, head to [Azure Portal](https://portal.azure.com/), under the _Kubernetes services_ section:
 
-![Kubernetes services list](azure-k8s-list.png)
+![Kubernetes services list](./azure-k8s-list.png)
 
 Then, choose the Cluster to import, navigate to _Overview_ > _Connect_
-![K8S instance Connect button](overview-connect.png)
+![K8S instance Connect button](./overview-connect.png)
 
 ## Store configurations locally
 
@@ -27,4 +27,4 @@ On your local machine, open a Powershell - Powershell, **not** Azure CLI, and ru
 4. Navigate to the path specified in the `--file` path to check that the credentials have been stored;
 5. Open Lens, and import the configurations.
 
-![Connection commands displayed on Azure](connect.png)
+![Connection commands displayed on Azure](./connect.png)
