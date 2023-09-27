@@ -36,9 +36,9 @@ Supported services:
 It supports all the redundancy options:
 
 - Locally Redundant Storage (LRS) (see :[[azure-storage-redundancy-types#Locally Redundant Storage (LRS)]])
+- Zone-Redundant Storage (ZRS) (see: [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)]])
 - Geo-Redundant Storage (GRS) (see: [[azure-storage-redundancy-types#Geo-Redundant Storage (GRS)]])
 - Read-Access Geo-Redundant Storage (RA-GRS) (see: [[azure-storage-redundancy-types#Read-Access Geo-Redundant Storage (RA-GRS)]])
-- Zone-Redundant Storage (ZRS) (see: [[azure-storage-redundancy-types#Zone-Redundant Storage (ZRS)]])
 - Geo-Zone-Redundant Storage (GZRS) (see:[[azure-storage-redundancy-types#Geo-Zone-Redundant Storage (GZRS)]])
 - Read-Access Geo-Zone-Redundant Storage (RA-GZRS) (see: [[azure-storage-redundancy-types#Read-Access Geo-Zone-Redundant Storage (RA-GZRS)]])
 
