@@ -9,6 +9,6 @@ You don't have to manage VMs.
 
 Azure Container Instances is a [[paas]] service.
 
-You can upload your single containers and have them run in the cloud.
+You can upload your single containers and have them run in the cloud in a single *pod*.
 
-
+Concepts like scaling, load balancing, and certificates are *not* provided with ACI containers. For example, to scale to five container instances, you create five distinct container instances.

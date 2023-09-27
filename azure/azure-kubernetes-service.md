@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 containers, paas
+tags: azure, cloud, azure-certifications/az900 containers, paas, K8S
 ---
 
 # Azure Kubernetes Service (AKS)
@@ -7,3 +7,5 @@ tags: azure, cloud, azure-certifications/az900 containers, paas
 AKS is a container **orchestration** service.
 
 It allows you to manage the lifecicle of a container.
+
+It supports direct access to the Kubernetes API and runs any Kubernetes workload. The full cluster resides in your subscription, with the cluster configurations and operations within your control and responsibility.
