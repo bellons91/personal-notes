@@ -4,7 +4,7 @@ tags: azure, cloud, azure-certifications/az900
 
 # Azure Log Analytics
 
-Azure Log Analytics is the tool in the Azure portal where you'll write and run **log queries** on the data gathered by [[azure-monitor.png]].
+Azure Log Analytics is the tool in the Azure portal where you'll write and run **log queries** on the data gathered by [[azure-monitor]].
 
 You can write an advanced query to perform statistical analysis and visualize the results in a chart to identify a particular trend.
 
