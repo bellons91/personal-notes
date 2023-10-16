@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, paas
+tags: azure, cloud, azure-certifications/az900, paas, azure-certifications/az204
 ---
 
 # Azure App Service
@@ -9,6 +9,10 @@ Build and host web apps, background jobs, mobile back-ends, and RESTful APIs **w
 It offers automatic scaling and high availability.
 
 It is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends.
+
+With Azure App Service you can both [[scale-up-down]] and [[scale-in-out]].
+
+You can use CI/CD and [[azure-app-services-deployment-slots]].
 
 ## Web apps
 
