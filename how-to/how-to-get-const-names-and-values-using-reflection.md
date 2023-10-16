@@ -1,5 +1,5 @@
 ---
-tags:  CSharp
+tags:  csharp
 ---
 
 # How to get C# const names and values using reflection

@@ -1,5 +1,5 @@
 ---
-tags:  Process, CMD, PowerShell, Windows
+tags:  process, cmd, powershell, windows
 ---
 
 # How to Kill Process by Id on PowerShell

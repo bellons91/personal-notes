@@ -1,5 +1,5 @@
 ---
-tags:  CSharp, Visual-Studio
+tags:  csharp, visual-studio
 ---
 
 # How to use Editorconfig

@@ -1,5 +1,5 @@
 ---
-tags: K8S
+tags: k8s, lens
 ---
 
 # How to print Environment Variables in a K8s Pod

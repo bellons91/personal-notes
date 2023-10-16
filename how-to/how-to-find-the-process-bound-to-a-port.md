@@ -1,5 +1,5 @@
 ---
-tags: TCP, CMD, PowerShell, Windows, Linux
+tags: tcp, cmd, powershell, windows, linux
 ---
 
 # How to find the process that is bound to a Port

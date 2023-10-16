@@ -1,5 +1,5 @@
 ---
-tags: Visual-Studio
+tags: visual-studio
 ---
 
 # How to open Visual Studio in a Sandbox on Windows

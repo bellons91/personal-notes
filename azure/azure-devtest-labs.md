@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, test, paas
+tags: azure, cloud, azure-certifications/az900, testing, paas
 ---
 
 # Azure DevTest Labs

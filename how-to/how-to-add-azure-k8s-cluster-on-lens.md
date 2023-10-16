@@ -1,5 +1,5 @@
 ---
-tags: Azure, K8S, Lens
+tags: azure, k8s, lens
 ---
 
 # How to Add Azure K8s Cluster on Lens?

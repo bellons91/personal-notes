@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 containers, paas, K8S
+tags: azure, cloud, azure-certifications/az900 containers, paas, k8s
 ---
 
 # Azure Kubernetes Service (AKS)

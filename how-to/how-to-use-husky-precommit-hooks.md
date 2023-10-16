@@ -1,5 +1,5 @@
 ---
-tags: GIT, dotNET
+tags: git, dotnet
 ---
 
 # How to Use Husky.NET Pre-commit hooks

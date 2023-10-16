@@ -1,5 +1,5 @@
 ---
-tags: Software-Architecture, Soft-Skills
+tags: software-architecture, soft-skills
 ---
 
 # What is Architectural Risk, and how to handle it
