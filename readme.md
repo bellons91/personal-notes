@@ -8,3 +8,4 @@ The repository can be found on [GitHub](https://github.com/bellons91/personal-no
 
 - Azure Certifications
   - [[az-900]]
+  - [[az-204]]
