@@ -14,6 +14,8 @@ With Azure App Service you can both [[scale-up-down]] and [[scale-in-out]].
 
 You can use CI/CD and [[azure-app-services-deployment-slots]].
 
+Each App Service belongs to an [[azure-app-service-plan]], which defines the compute capabilities.
+
 ## Web apps
 
 Used for hosting web applications. You can choose the OS: Windows or Linux.
@@ -40,3 +42,17 @@ Used to build a backend for iOS and Android applications.
 * Use social authentication such as MSA, Google, Twitter, and Facebook.
 * Send push notifications.
 * Execute custom back-end logic in C# or Node.js.
+
+## Deployment types
+
+There are two main deployment types, depending on the [[azure-app-service-plan]].
+
+* **multitenant public service**: host App Service plans in
+  * Free
+  * Shared
+  * Basic
+  * Standard
+  * Premium, PremiumV2, PremiumV3
+* **single-tenant environment**: available for Isolated SKU.
+
+Related: [[azure-app-services-multitenant-networking]]

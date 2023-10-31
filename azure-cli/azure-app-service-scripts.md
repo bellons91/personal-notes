@@ -22,3 +22,25 @@ or
 ```bash
 az webapp list-runtimes --os-type windows
 ```
+
+## List available outbound addresses
+
+List available IP addresses
+
+```bash
+az webapp show \
+    --resource-group <group_name> \
+    --name <app_name> \ 
+    --query outboundIpAddresses \
+    --output tsv
+```
+
+To find all possible outbound IP addresses for your app, regardless of pricing tiers, run the following command in the Cloud Shell.
+
+```bash
+az webapp show \
+    --resource-group <group_name> \ 
+    --name <app_name> \ 
+    --query possibleOutboundIpAddresses \
+    --output tsv
+```
