@@ -25,6 +25,6 @@
     "_site/**": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.markdownlint": true
+    "source.fixAll.markdownlint": "explicit"
   }
 }
