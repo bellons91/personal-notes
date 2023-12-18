@@ -30,3 +30,4 @@ Now you should see lots of PNG files with the rendering of the results.
      }
  }
 ```
+```mermaid```
