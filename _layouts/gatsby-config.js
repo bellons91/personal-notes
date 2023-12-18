@@ -35,6 +35,17 @@ module.exports = {
             },
           })
 
+// an example of syntax highlighting
+defaultPluginMdx.options.gatsbyRemarkPlugins.push({
+  resolve: `gatsby-remark-mermaid`,
+  options: /** @type {import('gatsby-remark-mermaid').Options} */ ({
+    mermaidConfig: {
+      theme: 'neutral',
+      themeCSS: '.node rect { fill: #fff; }'
+    }
+  })
+})
+
           // an example of syntax highlighting
           defaultPluginMdx.options.gatsbyRemarkPlugins.push({
             resolve: 'gatsby-remark-prismjs',
@@ -62,22 +73,6 @@ module.exports = {
         destination: '/assets',
         purge: false,
       },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-mermaid`,
-            options: /** @type {import('gatsby-remark-mermaid').Options} */ ({
-              mermaidConfig: {
-                theme: 'neutral',
-                themeCSS: '.node rect { fill: #fff; }'
-              }
-            })
-          }
-        ]
-      }
     }
-  ],
+  ]
 }
