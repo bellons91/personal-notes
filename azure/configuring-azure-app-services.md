@@ -95,6 +95,10 @@ Logs are **stored in the App Service file system**.
 
 Detailed tracing information on failed requests, **including a trace of the IIS components** used to process the request and the time taken in each component. One folder is generated for each failed request, which contains the XML log file, and the XSL stylesheet to view the log file with.
 
+**Available only for Windows** platform.
+
+Logs are **stored in the App Service file system**.
+
 ### Deployment logging
 
 Helps determine why a deployment failed. Deployment logging happens automatically and there are no configurable settings for deployment logging.
