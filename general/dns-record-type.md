@@ -24,7 +24,7 @@ Also known as a certification authority authorization record, it specifies which
 
 ## CNAME
 
-Also known as a canonical name record, it maps an alias name to a true domain name. This record is used to create an alias for a domain name. For example, a CNAME record for the domain name *<www.example.com>* could be *<www.example.com>*. IN CNAME example.com.
+Also known as a canonical name record, it maps an alias name to a true domain name. This record is used to create an alias for a domain name. For example, a CNAME record for the domain name `www.example.com` could be `www.example.com`. IN CNAME example.com.
 
 ## DNSKEY
 
