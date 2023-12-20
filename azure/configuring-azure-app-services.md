@@ -10,7 +10,7 @@ In Azure App Services, configurations are stored as *environment variables*.
 
 App settings are always encrypted when stored (*encrypted-at-rest*).
 
-If you are using [[deployment slots]], you can mark a setting as *swappable*.
+If you are using [[azure-app-services-deployment-slots]], you can mark a setting as *swappable*.
 
 Note: **the key format changes for Linux-based containers**. Instead of using `Key:SubKey` you have to use `Key__SubKey`.
 
