@@ -117,3 +117,16 @@ For Linux/container apps, the ZIP file contains console output logs for both the
 **For a scaled-out app**, the ZIP file contains one set of logs for each instance.
 
 In the App Service file system, these log files are the contents of the /home/LogFiles directory.
+
+## Configuring certificates
+
+Azure App Service has tools that let you create, upload, or import a private certificate or a public [[certificate]] into App Service.
+
+A certificate uploaded into an app is stored in a deployment unit that is bound to the app service plan's resource group and region combination (internally called a webspace). This makes the certificate accessible to other apps in the same resource group and region combination.
+
+You can either:
+
+* **Create a free App Service managed certificate**: you need a Basic, Standard, Premium or Isolated tier; it's a TLS/SSL server certificate that's fully managed by App Service and **renewed continuously and automatically in six-month increments**, 45 days before expiration. You create the certificate and bind it to a custom domain, and let App Service do the rest.
+* Purchase an App Service certificate;
+* **Import a certificate from Key Vault**: the certificate is then stored in [[azure-key-vault]];
+* Upload a private certificate (it must be stored in a [[pfx-file]] and encrypted with [[triple-des]])
