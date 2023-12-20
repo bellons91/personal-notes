@@ -14,4 +14,4 @@ All the operations on the DNS are tracked and logged, so that you can find error
 
 Azure DNS also supports private DNS domains, allowing you to use your own custom domain names.
 
-Azure DNS supports [[alias record]] sets; you can use an alias record set to refer to an Azure resource and, in case it changes, the DNS records are automatically updated.
+Azure DNS supports ALIAS [[dns-record-type]] sets; you can use an alias record set to refer to an Azure resource and, in case it changes, the DNS records are automatically updated.
