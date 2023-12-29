@@ -16,17 +16,19 @@ You can use CI/CD and [[azure-app-services-deployment-slots]].
 
 Each App Service belongs to an [[azure-app-service-plan]], which defines the compute capabilities.
 
-## Web apps
+## Types of App Services
+
+### Web apps
 
 Used for hosting web applications. You can choose the OS: Windows or Linux.
 
-## API apps
+### API apps
 
 Build REST-based web applications.
 
 **It supports Swagger**, and it allows to publish the APIs in Azure Marketplace.
 
-## WebJobs
+### WebJobs
 
 Used to run a program or a script in the same context as a Web App.
 
@@ -34,7 +36,7 @@ Jobs can be scheduled or can be triggered by an event.
 
 Since they run in the same context of the application, they can be useful to perform background tasks.
 
-## Mobile apps
+### Mobile apps
 
 Used to build a backend for iOS and Android applications.
 
@@ -56,3 +58,7 @@ There are two main deployment types, depending on the [[azure-app-service-plan]]
 * **single-tenant environment**: available for Isolated SKU.
 
 Related: [[azure-app-services-multitenant-networking]]
+
+## Autoscaling
+
+Autoscaling in Azure App Service monitors the resource metrics of a web app as it runs. It detects situations where other resources are required to handle an increasing workload, and ensures those resources are available before the system becomes overloaded.
