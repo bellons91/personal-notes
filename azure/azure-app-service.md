@@ -61,4 +61,4 @@ Related: [[azure-app-services-multitenant-networking]]
 
 ## Autoscaling
 
-Autoscaling in Azure App Service monitors the resource metrics of a web app as it runs. It detects situations where other resources are required to handle an increasing workload, and ensures those resources are available before the system becomes overloaded.
+[[azure-app-service-autoscale]] monitors the resource metrics of a web app as it runs. It detects situations where other resources are required to handle an increasing workload, and ensures those resources are available before the system becomes overloaded.
