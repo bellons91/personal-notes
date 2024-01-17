@@ -4,13 +4,20 @@ tags: azure, cloud, azure-certifications/az900 serverless, paas, azure-certifica
 
 # Azure Functions
 
-Azure Functions is an **event-driven**, **serverless** compute option that doesn’t require maintaining virtual machines or containers.
+Azure Functions is an **event-driven**, **serverless** compute option that doesn't require maintaining virtual machines or containers.
 
 With Azure Functions, an event wakes the function, alleviating the need to keep resources provisioned when there are no events.
 
 Since the function runs only after an event is triggered and then all the resources are deallocated, you only **pay for the CPU time** used by the function.
 
-Azure Functions supports **triggers**, which are ways to start execution of your code, and **bindings**, which are ways to simplify coding for input and output data.
+Azure Functions supports **triggers**, which are ways to start the execution of your code, and **bindings**, which are ways to simplify coding for input and output data.
+
+## Use cases
+
+* you don't care about the underlying infrastructure;
+* you have to respond to an event;
+* the work will take not more than a few seconds;
+* you need **automatic scalability**;
 
 ## Functions timeout
 
@@ -26,15 +33,33 @@ The same storage account used by your function app can also be used by your trig
 
 | Plan  | Benefits | Available on  |Scale out| Max # of instances | Function app timeout (minutes) |
 |--|--|--|--|--|--|
-|Consumption plan|It scales automatically and **you only pay for compute resources when your functions are running**. **Instances of the Functions host are dynamically added and removed** based on the number of incoming events.| Windows, Linux| **Event driven**. Scale out automatically, even during periods of high load. Azure Functions infrastructure **scales CPU and memory resources by adding more instances of the Functions host**, based on the number of incoming trigger events. |Windows: 200. Linux: 100. This is the max instances give on a **per-function app** basis.| 5 (default) to 10 (max)|
-|Premium plan | Automatically scales based on demand using **pre-warmed workers**, which run applications with no delay after being idle, runs on more powerful instances, and **connects to virtual networks**.| Windows, Linux| Event driven|Windows: 100. Linux: 20-100 Per-plan basis. | 30 (default) to unlimited|
+|Consumption plan|It scales automatically, and **you only pay for compute resources when your functions are running**. **Instances of the Functions host are dynamically added and removed** based on the number of incoming events.| Windows, Linux| **Event driven**. Scale-out automatically, even during periods of high load. Azure Functions infrastructure **scales CPU and memory resources by adding more instances of the Functions host**, based on the number of incoming trigger events. |Windows: 200. Linux: 100. This is the max instances given on a **per-function app** basis.| 5 (default) to 10 (max)|
+|Premium plan | Automatically scales based on demand using **pre-warmed workers**, which run applications with no delay after being idle, run on more powerful instances, and **connect to virtual networks**.| Windows, Linux| Event driven|Windows: 100. Linux: 20-100 Per-plan basis. | 30 (default) to unlimited|
 |Dedicated plan|Run your functions within an App Service plan at regular App Service plan rates. Best **for long-running scenarios** where Durable Functions can't be used.|Windows, Linux|Manual/autoscale | 10-20|30 (default) to unlimited|
 | ASE | [[App Service Environment]] (ASE) is an App Service feature that provides a fully isolated and dedicated environment for securely running App Service apps at high scale. | | Manual/autoscale| 100|
 |Kubernetes |Fully isolated and dedicated environment running on top of the Kubernetes platform.| Direct or with [[azure-arc]]|Event-driven autoscale for Kubernetes clusters using KEDA. |Varies by cluster|
 
-## Use cases
+## Scaling
 
-* you don't care about the underlying infrastructure;
-* you have to respond to an event;
-* the work will take not more that a few seconds;
-* you need **automatic scalability**;
+In the **Consumption and Premium plans**, Azure Functions scales CPU and memory resources by adding more instances of the Functions host. The number of instances is determined by the number of events that trigger a function.
+
+**Each instance of the Functions host in the Consumption plan is limited to 1.5 GB of memory and one CPU.** An instance of the host is the entire function app, meaning all functions within a function app share resources within an instance and scale at the same time. Function apps that share the same Consumption plan scale independently.
+
+In the Premium plan, the plan size determines the available memory and CPU for all apps in that plan on that instance.
+
+**Function code files are stored on Azure Files shares on the function's main storage account**. When you delete the main storage account of the function app, the function code files are deleted and can't be recovered.
+
+The **Scale Controller** is the component that monitors the rate of events and determines whether to scale out or scale in, using **heuristics** for each trigger type.
+
+When there are no functions running within a function app, the number of instances can scale to zero. Then, the first request has a bit of latency because the function app must scale to one. This latency is called **cold start**.
+
+![Scale Controller](./azure-functions-scale-controller.png)
+
+Even though a function app can scale out to a max of 200 instances, a single instance can process more requests at a time, so there isn't a hard limit on the number of concurrent executions.
+
+For HTTP triggers, new instances are allocated, at most, once per second. For non-HTTP triggers, new instances are allocated, at most, once every 30 seconds.
+
+You may need to define a limit to the maximum number of instances. You can define a value for the `functionAppScaleLimit` configuration:
+
+* `0` or `null` to have an unrestricted number of instances;
+* `1` to the max number of instances depending on the Plan (200 for Consumption, 100 for Premium).
