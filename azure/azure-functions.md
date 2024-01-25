@@ -63,3 +63,151 @@ You may need to define a limit to the maximum number of instances. You can defin
 
 * `0` or `null` to have an unrestricted number of instances;
 * `1` to the max number of instances depending on the Plan (200 for Consumption, 100 for Premium).
+
+## Development
+
+A **function** is made of:
+
+* the code, which can be written in many languages;
+* the configs, stored in the `function.json` file;
+
+Some notes about the `function.json` file:
+
+* It is automatically generated for compiled languages, using the annotations written in the function code;
+* Must be created manually for scripted languages;
+* Contains a node named `bindings` which contains the **trigger**, the **bindings**, and configuration settings. **Each function has exactly one trigger**, but can have other bindings.
+
+The `function.json` file has this shape:
+
+```json
+{
+    "disabled":false,
+    "bindings":[
+        // ... bindings here
+        {
+            "type": "bindingType",
+            "direction": "in",
+            "name": "myParamName",
+            // ... more depending on binding
+        }
+    ]
+}
+```
+
+The *bindings* node contains both the trigger and the other bindings. Each item requires at least these settings:
+
+* `type`: name of the binding/trigger;
+* `direction`: indicates whether the binding is for receiving data into the function or sending data from the function. For example, `in` or `out`.
+* `name`: name used for the binding.
+
+Functions are grouped in a Function App. The Function App has some other configurations stored in the `host.json` file, which contains runtime-specific configurations.
+
+Starting version 2.x, **all functions in a function app must use the same programming language**.
+
+Triggers and bindings let you avoid hardcoding access to other services. Your function receives data (for example, the content of a queue message) in function parameters. You send data (for example, to create a queue message) by using the return value of the function.
+
+Triggers:
+
+* exactly one per function;
+* can have associated data (a payload)
+* the direction is always *in*
+
+Bindings:
+
+* allow you to connect to other resources;
+* can be *input bindings* or *output bindings*;
+* optional
+* a function might have one or multiple input and/or output bindings
+* some bindings have a *inout* direction.
+* as output binding, you can use the return value of the function.
+
+Example of *function.json* file with both input and output bindings:
+
+```js
+{
+  "bindings": [
+    {
+      "type": "queueTrigger",
+      "direction": "in",
+      "name": "order",
+      "queueName": "myqueue-items",
+      "connection": "MY_STORAGE_ACCT_APP_SETTING"
+    },
+    {
+      "type": "table",
+      "direction": "out",
+      "name": "$return",
+      "tableName": "outTable",
+      "connection": "MY_TABLE_STORAGE_ACCT_APP_SETTING"
+    }
+  ]
+}
+```
+
+Which, in C# can be expressed as
+
+```cs
+#r "Newtonsoft.Json"
+
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
+
+// From an incoming queue message that is a JSON object, add fields and write to Table storage
+// The method return value creates a new row in Table Storage
+public static Person Run(JObject order, ILogger log)
+{
+    return new Person() { 
+            PartitionKey = "Orders", 
+            RowKey = Guid.NewGuid().ToString(),  
+            Name = order["Name"].ToString(),
+            MobileNumber = order["MobileNumber"].ToString() };  
+}
+
+public class Person
+{
+    public string PartitionKey { get; set; }
+    public string RowKey { get; set; }
+    public string Name { get; set; }
+    public string MobileNumber { get; set; }
+}
+```
+
+or, in a class library, you can define triggers and binding using C# attributes:
+
+```cs
+public static class QueueTriggerTableOutput
+{
+    [FunctionName("QueueTriggerTableOutput")]
+    [return: Table("outTable", Connection = "MY_TABLE_STORAGE_ACCT_APP_SETTING")]
+    public static Person Run(
+        [QueueTrigger("myqueue-items", Connection = "MY_STORAGE_ACCT_APP_SETTING")]JObject order,
+        ILogger log)
+    {
+        return new Person() {
+                PartitionKey = "Orders",
+                RowKey = Guid.NewGuid().ToString(),
+                Name = order["Name"].ToString(),
+                MobileNumber = order["MobileNumber"].ToString() };
+    }
+}
+
+public class Person
+{
+    public string PartitionKey { get; set; }
+    public string RowKey { get; set; }
+    public string Name { get; set; }
+    public string MobileNumber { get; set; }
+}
+```
+
+Notice that **the Connection value refers to a configuration key, and does not contain the real connection string**. The default configuration provider uses environment variables that are set in Application Settings when running in the Azure Functions service, or from the local settings file when developing locally.
+
+## Identity-based connections
+
+Some functions may require the use of an identity instead of a secret:
+
+* Identity-based connections use a Managed Identity;
+* Identity-based connections are *not* supported by Durable Functions;
+* By default, it uses the system-assigned identity. However, you can specify `credential` and `clientID` to use a user-assigned identity;
+* When developing locally, the developer identity is used.
+* Done by assigning a role in [[azure-rbac]] or specifying the identity in an access policy, depending on the service to which you're connecting
