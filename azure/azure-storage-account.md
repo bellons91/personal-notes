@@ -10,7 +10,7 @@ Using storage accounts, data is secure, highly available, durable, and scalable.
 
 ## Blobs
 
-The storage service offers three types of blobs: [[block-blobs]], [[append-blobs]], and [[page-blobs]]. You specify the blob type when you create the blob. Once the blob has been created, its type cannot be changed.
+The storage service offers three types of blobs: [[azure-blob-storage-block-blobs]], [[azure-blob-storage-append-blobs]], and [[azure-blob-storage-page-blobs]]. You specify the blob type when you create the blob. Once the blob has been created, its type cannot be changed.
 
 All blobs reflect committed changes immediately. Each version of the blob has a unique tag, called an **ETag**, that you can use with access conditions to assure you only change a specific instance of the blob.
 
@@ -44,7 +44,7 @@ It supports all the redundancy options:
 
 ### Premium block blobs
 
-Premium storage for [[block-blobs]] and [[append-blobs]].
+Premium storage for [[azure-blob-storage-block-blobs]] and [[azure-blob-storage-append-blobs]].
 
 Recommended for scenarios with **high transaction rates** or that use smaller objects or require consistently low storage latency.
 
@@ -70,6 +70,6 @@ It supports:
 
 ### Premium page blobs
 
-For [[page-blobs]] only.
+For [[azure-blob-storage-page-blobs]] only.
 
 It supports only Locally Redundant Storage (LRS)

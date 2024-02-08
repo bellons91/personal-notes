@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900
+tags: azure, cloud, azure-certifications/az900, azure-certifications/az204, storage, azure-blob-storage
 ---
 
 # Append Blobs

@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 storage
+tags: azure, cloud, azure-certifications/az900, azure-certifications/az204, storage, azure-blob-storage
 ---
 
 # Azure Blob Storage
@@ -18,13 +18,19 @@ Blob storage is ideal for:
 
 Objects can be accessed via HTTP or HTTPS, given that every object can be referenced using a specific URL.
 
+**An [[azure-storage-account]] is the top-level container** for all of your Azure Blob storage. The storage account provides a unique namespace for your Azure Storage data.
+
 This service provides a list of endpoints available at  https://{storage-account-name}.blob.core.windows.net
+
+Each Storage Account contains one or more [[azure-blob-container]], and each Blob Container contains
 
 ## Blob Storage tiers
 
 To manage costs better you have to pick the right storage tier, depending on the expected usage.
 
 ### Hot tier
+
+New storage accounts are created in the **hot tier by default**.
 
 In the Hot tier, you keep your resources always available: it's **good for data that is accessed often** because it allows you to access it quickly.
 
@@ -68,3 +74,9 @@ This tier is for archiving data, so its costs are **very high for data access** 
 It's good for data that does not change for at least 180 days.
 
 Data is stored offline to reduce costs, but you will have higher costs to rehydrate and access data.
+
+The archive tier is available only for individual [[azure-blob-storage-block-blobs]]. This tier is optimized for data that can tolerate several hours of retrieval latency.
+
+## Security
+
+All data (including metadata) written to Azure Storage is **automatically encrypted using Storage Service Encryption (SSE)**.

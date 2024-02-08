@@ -19,4 +19,4 @@ With Azure Resource Manager, you can:
 - Clarify your organization's billing by viewing costs for a group of resources with the same tag.
 - Orchestrates the creation of those resources in parallel.
 
-You can define the infrastructure using [[arm-templates]] or [[bicep]].
+You can define the infrastructure using [[arm-templates]] or [[azure-bicep]].
