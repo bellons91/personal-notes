@@ -54,3 +54,45 @@ Encryption relies on keys. You have three options to handle keys:
 |Key rotation responsibility| Microsoft |Customer |Customer|
 |Key usage| Microsoft| Azure portal, Storage Resource Provider REST API, Azure Storage management libraries, PowerShell, CLI| Azure Storage REST API (Blob storage), Azure Storage client libraries|
 |Key access| Microsoft only| Microsoft, Customer| Customer only|
+
+## How to operate with Azure Blob Storage using REST APIs
+
+You can use the CLI, .NET SDKs, or REST APIs to work with Blob Storage.
+
+You can define properties (system-wide) and blob-specific metadata.
+
+For REST APIs,the metadata consists of name/value pairs. The total size of all metadata pairs can be up to 8KB in size. Metadata are stored as HTTP headers: you can retrieve them by using both the GET and the HEAD HTTP verb.
+
+```bash
+GET/HEAD https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=metadata
+```
+
+You can set metadata by using the PUT method. **If you don't set any metadata, the operation clears all the existing ones**.
+
+```bash
+PUT https://myaccount.blob.core.windows.net/mycontainer?comp=metadata&restype=container
+```
+
+Metadata include:
+
+* **System properties**: System properties exist on each Blob storage resource. Some of them can be read or set, while others are read-only. Under the covers, some system properties correspond to certain standard HTTP headers. The Azure Storage client library for .NET maintains these properties for you.
+
+* **User-defined metadata**: User-defined metadata consists of one or more name-value pairs that you specify for a Blob storage resource. You can use metadata to store additional values with the resource. Metadata values are for your own purposes only, and do not affect how the resource behaves. Their name starts with `x-ms-meta-`.
+
+The standard HTTP headers supported on *containers* include:
+
+* ETag
+* Last-Modified
+
+The standard HTTP headers supported on *blobs* include:
+
+* ETag
+* Last-Modified
+* Content-Length
+* Content-Type
+* Content-MD5
+* Content-Encoding
+* Content-Language
+* Cache-Control
+* Origin
+* Range
