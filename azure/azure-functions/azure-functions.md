@@ -53,7 +53,7 @@ The **Scale Controller** is the component that monitors the rate of events and d
 
 When there are no functions running within a function app, the number of instances can scale to zero. Then, the first request has a bit of latency because the function app must scale to one. This latency is called **cold start**.
 
-![Scale Controller](./azure-functions-scale-controller.png)
+![Scale Controller](azure-functions/azure-functions-scale-controller.png)
 
 Even though a function app can scale out to a max of 200 instances, a single instance can process more requests at a time, so there isn't a hard limit on the number of concurrent executions.
 
