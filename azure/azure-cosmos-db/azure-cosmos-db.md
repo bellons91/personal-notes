@@ -26,6 +26,17 @@ For each account you can define its [[azure-cosmos-db-consistency-levels]].
 
 With Azure Cosmos DB, you pay for the throughput you provision and the storage you consume on an hourly basis. Throughput must be provisioned to ensure that sufficient system resources are available for your Azure Cosmos database always. DB operations are expressed in [[azure-cosmos-db-request-units]].
 
+Azure Cosmos DB encryption protects your data at rest by seamlessly encrypting your data as it's written in our datacenters, and automatically decrypting it for you as you access it.
+
+## Backup
+
+You can define backup policies for your data.
+
+- **Periodic**: backup is taked at periodic intervals, based on configuration.
+- **Continuous**: provides a backup window of 7 or 30 days. You can restore data available at any moment in that specific time window.
+
+Backup can be stored redundantly, using either Local-redundant storage or Geo-redundant storage.
+
 ## Available APIs
 
 - **NoSQL**: data is stored in document format. **It's the default API**. It supports querying using SQL syntax.

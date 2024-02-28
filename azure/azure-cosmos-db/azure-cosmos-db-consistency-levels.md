@@ -34,6 +34,8 @@ A client never sees an uncommitted or partial write.
 
 Users are always guaranteed to read the latest committed write.
 
+![Strong Consistency](./strong-consistency.png)
+
 ## Bounded staleness consistency
 
 In bounded staleness consistency, the reads are guaranteed to honor the consistent-prefix guarantee.
@@ -47,11 +49,23 @@ For a single region account, the minimum value of K and T is 10 write operations
 
 [[Che succede se ci sono più di 10 write negli ultimi 5 secondi? Si perde la consistency?]]
 
+Bounded staleness consistency is most frequently chosen by globally distributed applications expecting low write latencies but total global order guarantees.
+
+Unlike strong consistency which is scoped to a single region, you can choose bounded staleness consistency with any number of read regions (along with a write region). Bounded staleness is great for applications featuring group collaboration and sharing, stock ticker, publish-subscribe/queueing etc
+
+![Bounded staleness consistency](./bounded-staleness-consistency.png)
+
 ## Session consistency
 
 In session consistency, **within a single client session** reads are guaranteed to honor the consistent-prefix, [[monotonic reads]], [[monotonic writes]], [[read-your-writes]], and [[write-follows-reads]] guarantees.
 
 This assumes a single "writer" session or sharing the session token for multiple writers.
+
+This is the **default consistency level**.
+
+It provides write latencies, availability and read throughput comparable to that of eventual consistency but also provides the consistency guarantees that suit the needs of applications written to operate in the context of a user.
+
+![Session consistency](./session-consistency.png)
 
 ## Consistent prefix consistency
 
@@ -65,10 +79,22 @@ Write operations within a transaction of multiple documents are always visible t
 
 Assume two write operations are performed on documents Doc 1 and Doc 2, within transactions T1 and T2. When client does a read in any replica, the user sees either “Doc 1 v1 and Doc 2 v1” or “Doc 1 v2 and Doc 2 v2”, but never “Doc 1 v1 and Doc 2 v2” or “Doc 1 v2 and Doc 2 v1” for the same read or query operation.
 
+If writes were performed in the order `A, B, C`, then a client sees either `A`, `A,B`, or `A,B,C`, but never out of order like `A,C` or `B,A,C`.
+
+Consistent Prefix provides write latencies, availability and read throughput comparable to that of eventual consistency, but also **provides the order guarantees** that suit the needs of scenarios where order is important.
+
+![Consistent prefix consistency](./consistent-prefix-consistency.png)
+
 ## Eventual consistency
 
 In eventual consistency, there's no ordering guarantee for reads. In the absence of any further writes, the replicas eventually converge.
 
-Eventual consistency is the weakest form of consistency because a client may read the values that are older than the ones it read before. Eventual consistency is ideal where the application doesn't require any ordering guarantees. Examples include count of Retweets, Likes, or nonthreaded comments.
+Eventual consistency is the weakest form of consistency because **a client may read the values that are older than the ones it read before**.
+
+Eventual consistency is ideal where the application doesn't require any ordering guarantees. Examples include count of Retweets, Likes, or nonthreaded comments.
+
+![Eventual consistency](./eventual-consistency.png)
 
 [[aggiungi https://en.wikipedia.org/wiki/Consistency_model]]
+
+[[https://learn.microsoft.com/en-gb/azure/cosmos-db/consistency-levels]]
