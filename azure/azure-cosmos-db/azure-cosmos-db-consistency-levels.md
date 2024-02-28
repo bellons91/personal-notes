@@ -70,3 +70,5 @@ Assume two write operations are performed on documents Doc 1 and Doc 2, within t
 In eventual consistency, there's no ordering guarantee for reads. In the absence of any further writes, the replicas eventually converge.
 
 Eventual consistency is the weakest form of consistency because a client may read the values that are older than the ones it read before. Eventual consistency is ideal where the application doesn't require any ordering guarantees. Examples include count of Retweets, Likes, or nonthreaded comments.
+
+[[aggiungi https://en.wikipedia.org/wiki/Consistency_model]]

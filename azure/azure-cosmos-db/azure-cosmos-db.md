@@ -23,3 +23,14 @@ To use CosmoDB you have to create a [[azure-cosmos-db-account]]. Every account c
 ![CosmosDB Hierarcy](./cosmosdb-resources-hierarchy.png)
 
 For each account you can define its [[azure-cosmos-db-consistency-levels]].
+
+With Azure Cosmos DB, you pay for the throughput you provision and the storage you consume on an hourly basis. Throughput must be provisioned to ensure that sufficient system resources are available for your Azure Cosmos database always. DB operations are expressed in [[azure-cosmos-db-request-units]].
+
+## Available APIs
+
+- **NoSQL**: data is stored in document format. **It's the default API**. It supports querying using SQL syntax.
+- **MongoDB**: data is stored in documents using BSON format.
+- **PostgreSQL**: allows for distributed tables. Data is stored either on a single node or in a multi-node configuration.
+- **[[apache-cassandra]]**: data is stored in a **column-oriented schema**. Good for large volumes of data.
+- **Apache Gremlin**: creates graphs where data is stored as edges and vertices.
+- **Table**: it stores data in **key/value format**. If you're currently using Azure Table storage, you may see some limitations in latency, scaling, throughput, global distribution, index management, low query performance. API for Table overcomes these limitations and it's recommended to migrate your app if you want to use the benefits of Azure Cosmos DB. API for Table only supports [[OLTP]] scenarios.
