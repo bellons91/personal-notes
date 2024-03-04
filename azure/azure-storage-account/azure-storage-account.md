@@ -4,19 +4,22 @@ tags: azure, cloud, azure-certifications/az900 storage
 
 # Azure Storage Account
 
-Cloud storage solution. It's an entry point to access data over HTTP or HTTPS.
+Cloud storage solution, **IaaS**. It's an entry point to access data over HTTP or HTTPS.
 
 Using storage accounts, data is secure, highly available, durable, and scalable.
 
 You can even use Azure Storage publish static content (see [[static-website-hosting-with-azure-storage]]).
 
-## Blobs
+You can use it to create a Virtual Machine with consistent disks and storage.
 
-The storage service offers three types of blobs: [[azure-blob-storage-block-blobs]], [[azure-blob-storage-append-blobs]], and [[azure-blob-storage-page-blobs]]. You specify the blob type when you create the blob. Once the blob has been created, its type cannot be changed.
+You create a Storage Account in a specific region (to enable redundancy).
 
-All blobs reflect committed changes immediately. Each version of the blob has a unique tag, called an **ETag**, that you can use with access conditions to assure you only change a specific instance of the blob.
+Azure Storage Account allows you to use:
 
-Any blob can be **leased for exclusive write access**. When a blob is leased, only calls that include the current lease ID can modify the blob or (for block blobs) its blocks.
+- [[azure-file-storage]]
+- [[azure-blob-storage]]
+- [[azure-table-storage]]
+- [[azure-queue-storage]]
 
 ## Storage Account Tiers
 
@@ -33,7 +36,7 @@ Supported services:
 - [[azure-blob-storage]]
 - [[azure-queue-storage]]
 - [[azure-table-storage]]
-- [[azure-files]]
+- [[azure-file-storage]]
 
 It supports all the redundancy options:
 
@@ -63,7 +66,7 @@ For file shares only.
 
 Recommended for enterprise or high-performance scale applications.
 
-Is available only for [[azure-files]].
+Is available only for [[azure-file-storage]].
 
 It supports:
 

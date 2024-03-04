@@ -26,6 +26,14 @@ Each Storage Account contains one or more [[azure-blob-container]], and each Blo
 
 Depending on the usage, you can use a different [[azure-blob-storage-tiers]].
 
+## Types of Blobs
+
+The storage service offers three types of blobs: [[azure-blob-storage-block-blobs]], [[azure-blob-storage-append-blobs]], and [[azure-blob-storage-page-blobs]]. You specify the blob type when you create the blob. Once the blob has been created, its type cannot be changed.
+
+All blobs reflect committed changes immediately. Each version of the blob has a unique tag, called an **ETag**, that you can use with access conditions to assure you only change a specific instance of the blob.
+
+Any blob can be **leased for exclusive write access**. When a blob is leased, only calls that include the current lease ID can modify the blob or (for block blobs) its blocks.
+
 ## Security
 
 All data (including metadata) written to Azure Storage is **automatically encrypted using Storage Service Encryption (SSE)**. Data in Azure Storage is encrypted and decrypted transparently using 256-bit AES encryption. Azure Storage encryption is enabled for all new and existing storage accounts and **can't be disabled**.
