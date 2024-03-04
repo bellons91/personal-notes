@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 storage
+tags: azure, cloud, azure-certifications/az900, azure-certifications/az204, storage
 ---
 
 # Azure Storage Account
