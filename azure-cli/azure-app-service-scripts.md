@@ -44,3 +44,5 @@ az webapp show \
     --query possibleOutboundIpAddresses \
     --output tsv
 ```
+
+

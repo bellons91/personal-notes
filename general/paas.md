@@ -20,7 +20,5 @@ The cloud provider maintains:
 - [[azure-app-service]]
 - [[azure-container-apps]]
 - [[azure-kubernetes-service]]
-- [[azure-active-directory]]
-- [[azure-active-directory-domain-services]]
-
-
+- [[azure-entra]]
+- [[azure-entra-domain-services]]

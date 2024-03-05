@@ -4,7 +4,7 @@ tags: azure, cloud, azure-certifications/az204, storage, azure-storage-account
 
 # Static website hosting with Azure Storage
 
-If you have an [[azure-storage-account-scripts2]], you can **serve static content** (HTML, CSS, JavaScript, and image files) directly from a storage container named `$web`.
+If you have an [[azure-storage-account-scripts]], you can **serve static content** (HTML, CSS, JavaScript, and image files) directly from a storage container named `$web`.
 
 You can make your static website available via a custom domain.
 

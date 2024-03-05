@@ -18,7 +18,7 @@ Blob storage is ideal for:
 
 Objects can be accessed via HTTP or HTTPS, given that every object can be referenced using a specific URL.
 
-**An [[azure-storage-account-scripts2]] is the top-level container** for all of your Azure Blob storage. The storage account provides a unique namespace for your Azure Storage data.
+**An [[azure-storage-account-scripts]] is the top-level container** for all of your Azure Blob storage. The storage account provides a unique namespace for your Azure Storage data.
 
 This service provides a list of endpoints available at  https://{storage-account-name}.blob.core.windows.net
 

@@ -72,6 +72,7 @@ GZRS copies data in 3 different availability zones and then replicates data to a
 GZRS provides at least **16 nines of durability** of objects over a given year.
 
 You cannot read data from the secondary region, unless a failover operation is performed.
+
 ![Geo-Zone-Redundant Storage (GZRS)](gzrs.png)
 
 ### Read-Access Geo-Redundant Storage (RA-GRS)
@@ -85,5 +86,3 @@ Data might not be immediately updated due to RPO.
 Similar to GZRS, but you can also read data from the secondary region.
 
 Data might not be immediately updated due to RPO.
-
-

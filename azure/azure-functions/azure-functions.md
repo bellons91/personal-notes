@@ -25,7 +25,7 @@ The `functionTimeout` property in the `host.json` project file specifies the tim
 
 ## Required storage account
 
-On any plan, a function app requires a general [[azure-storage-account-scripts2]], which supports Azure Blob, Queue, Files, and Table storage. This is because **Functions rely on Azure Storage for operations such as managing triggers and logging function executions**, but some storage accounts don't support queues and tables.
+On any plan, a function app requires a general [[azure-storage-account-scripts]], which supports Azure Blob, Queue, Files, and Table storage. This is because **Functions rely on Azure Storage for operations such as managing triggers and logging function executions**, but some storage accounts don't support queues and tables.
 
 The same storage account used by your function app can also be used by your triggers and bindings to store your application data. However, for storage-intensive operations, you should use a separate storage account.
 

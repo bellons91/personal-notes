@@ -19,7 +19,7 @@ Azure Entra provides several services:
 
 If you have an on-prem Active Entra and want to synchronize the data with Azure Entra, you can use **Azure Entra Connect**. Data is synchronized in both ways so that you can use SSO and MFA on both systems.
 
-You can use domain services with [[azure-active-directory-domain-services]].
+You can use domain services with [[azure-entra-domain-services]].
 
 Azure Entra can handle several types of authentication:
 
@@ -28,4 +28,4 @@ Azure Entra can handle several types of authentication:
 - passwordless authentication (eg, Windows Hello for Business)
 - [[fido2-authentication]]
 
-You can finally manage users from external sources by using [[azure-ad-external-identities]].
+You can finally manage users from external sources by using [[azure-entra-external-identities]].
