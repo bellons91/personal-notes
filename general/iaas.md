@@ -33,5 +33,5 @@ In the [[shared-responsibility-model]], IaaS places the largest share of respons
 - Traffic Manager
 - [[azure-virtual-network]]
 - [[azure-virtual-network#VPN gateways]]
-- [[azure-storage-account]]
+- [[azure-storage-account-scripts2]]
 - Managed Disks

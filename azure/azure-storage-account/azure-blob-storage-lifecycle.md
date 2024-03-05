@@ -23,6 +23,8 @@ By adjusting storage tiers in respect to the age of data, you can design the **l
 
 A lifecycle management policy is a **collection of rules in a JSON document**.
 
+You can also define such policies using the UI.
+
 Each rule definition within a policy includes a filter set and an action set.
 
 The *filter set* limits rule actions to a certain set of objects within a container or objects names. **Filters are evaluated with logical AND**.

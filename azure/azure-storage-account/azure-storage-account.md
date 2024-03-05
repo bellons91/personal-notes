@@ -21,6 +21,8 @@ Azure Storage Account allows you to use:
 - [[azure-table-storage]]
 - [[azure-queue-storage]]
 
+You can also use [[hierarchical-namespaces]].
+
 ## Storage Account Tiers
 
 There are several tiers, each of them with specific usage and supported services.

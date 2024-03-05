@@ -18,13 +18,19 @@ Blob storage is ideal for:
 
 Objects can be accessed via HTTP or HTTPS, given that every object can be referenced using a specific URL.
 
-**An [[azure-storage-account]] is the top-level container** for all of your Azure Blob storage. The storage account provides a unique namespace for your Azure Storage data.
+**An [[azure-storage-account-scripts2]] is the top-level container** for all of your Azure Blob storage. The storage account provides a unique namespace for your Azure Storage data.
 
 This service provides a list of endpoints available at  https://{storage-account-name}.blob.core.windows.net
 
 Each Storage Account contains one or more [[azure-blob-container]], and each Blob Container contains
 
 Depending on the usage, you can use a different [[azure-blob-storage-tiers]].
+
+You can enable **[[versioning for blobs]]** (keep all the versions or remove versions older than X days). For blobs you can store each single version (each representing an update), an one or more **snapshots**, that are "named" versions for easier retrieval.
+
+You can enable [[blob change feeds]].
+
+You can create [[immutable blobs]] using predefined rules or defining custom policies.
 
 ## Types of Blobs
 
@@ -67,7 +73,7 @@ Encryption relies on keys. You have three options to handle keys:
 
 You can use the CLI, .NET SDKs, or REST APIs to work with Blob Storage.
 
-You can define properties (system-wide) and blob-specific metadata.
+You can define properties (system-wide) and blob-specific [[azure-blob-metadata]].
 
 For REST APIs,the metadata consists of name/value pairs. The total size of all metadata pairs can be up to 8KB in size. Metadata are stored as HTTP headers: you can retrieve them by using both the GET and the HEAD HTTP verb.
 
@@ -80,27 +86,3 @@ You can set metadata by using the PUT method. **If you don't set any metadata, t
 ```bash
 PUT https://myaccount.blob.core.windows.net/mycontainer?comp=metadata&restype=container
 ```
-
-Metadata include:
-
-* **System properties**: System properties exist on each Blob storage resource. Some of them can be read or set, while others are read-only. Under the covers, some system properties correspond to certain standard HTTP headers. The Azure Storage client library for .NET maintains these properties for you.
-
-* **User-defined metadata**: User-defined metadata consists of one or more name-value pairs that you specify for a Blob storage resource. You can use metadata to store additional values with the resource. Metadata values are for your own purposes only, and do not affect how the resource behaves. Their name starts with `x-ms-meta-`.
-
-The standard HTTP headers supported on *containers* include:
-
-* ETag
-* Last-Modified
-
-The standard HTTP headers supported on *blobs* include:
-
-* ETag
-* Last-Modified
-* Content-Length
-* Content-Type
-* Content-MD5
-* Content-Encoding
-* Content-Language
-* Cache-Control
-* Origin
-* Range

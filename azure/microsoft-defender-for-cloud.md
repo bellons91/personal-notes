@@ -14,7 +14,7 @@ Defender for Cloud can automatically deploy a **Log Analytics agent** to gather 
 
 Microsoft Defender is already integrated with Azure. Many Azure services are monitored and protected by default with Microsoft Defender.
 
-It works with several PaaS services, such as [[azure-app-service]], [[Azure SQL]], and [[azure-storage-account]]. It watches for anomalies in the activity logs.
+It works with several PaaS services, such as [[azure-app-service]], [[Azure SQL]], and [[azure-storage-account-scripts2]]. It watches for anomalies in the activity logs.
 
 When working with [[Azure SQL]], it can automatically classify data and assess for vulnerabilities in your storage.
 
