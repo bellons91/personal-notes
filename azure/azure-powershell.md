@@ -4,7 +4,7 @@ tags: azure, cloud, azure-certifications/az900
 
 # Azure PowerShell
 
-With the *cmdlets*, you can call the Azure REST API to perform management tasks in Azure.
+With the _cmdlets_, you can call the Azure REST API to perform management tasks in Azure.
 
 Cmdlets can be combined to orchestrate actions.
 

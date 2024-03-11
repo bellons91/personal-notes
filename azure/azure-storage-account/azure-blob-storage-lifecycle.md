@@ -10,10 +10,10 @@ Each blob "belongs" to a specific [[azure-blob-storage-tiers]].
 
 However, you can define **lifecycle management policies** to handle the status of a blob. With these policies you can:
 
-* Transition blobs to a **cooler** storage tier (hot to cool, hot to archive, or cool to archive) to optimize for performance and cost;
-* Delete blobs at the end of their lifecycles;
-* Define rules to be run once per day at the storage account level;
-* Apply rules to containers or a subset of blobs (using prefixes as filters);
+- Transition blobs to a **cooler** storage tier (hot to cool, hot to archive, or cool to archive) to optimize for performance and cost;
+- Delete blobs at the end of their lifecycles;
+- Define rules to be run once per day at the storage account level;
+- Apply rules to containers or a subset of blobs (using prefixes as filters);
 
 By adjusting storage tiers in respect to the age of data, you can design the **least expensive storage options** for your needs. To achieve this transition, lifecycle management policy rules are available to move aging data to cooler tiers.
 
@@ -27,9 +27,9 @@ You can also define such policies using the UI.
 
 Each rule definition within a policy includes a filter set and an action set.
 
-The *filter set* limits rule actions to a certain set of objects within a container or objects names. **Filters are evaluated with logical AND**.
+The _filter set_ limits rule actions to a certain set of objects within a container or objects names. **Filters are evaluated with logical AND**.
 
-The *action set* applies the tier or delete actions to the filtered set of objects
+The _action set_ applies the tier or delete actions to the filtered set of objects
 
 ```json
 {
@@ -40,8 +40,8 @@ The *action set* applies the tier or delete actions to the filtered set of objec
       "type": "Lifecycle",
       "definition": {
         "filters": {
-          "blobTypes": [ "blockBlob" ],
-          "prefixMatch": [ "container1/foo" ]
+          "blobTypes": ["blockBlob"],
+          "prefixMatch": ["container1/foo"]
         },
         "actions": {
           "baseBlob": {
@@ -59,31 +59,31 @@ The *action set* applies the tier or delete actions to the filtered set of objec
 }
 ```
 
-| property name | description | required |
-|--|--|--|
-| rules | Array of rule objects. Up to 100 rules in a policy. | true |
-| rules.name | name of the rule | true |
-| rules.enabled | true by default | false |
-| rules.type | Lifecycle is the only accepted value | true |
-| rules.definition | Each definition is made up of one filter set and one action set | true |
-| rules.definition.filters.blobTypes | An array of predefined enum values. | true |
-| rules.definition.filters.prefixMatch | An array of strings for prefixes to be match. Each rule can define up to 10 prefixes. A prefix string must start with a container name. | false |
-| rules.definition.filters.blobIndexMatch | An array of dictionary values consisting of blob index tag key and value conditions to be matched. Each rule can define up to 10 blob index tag condition. | false |
+| property name                           | description                                                                                                                                                | required |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| rules                                   | Array of rule objects. Up to 100 rules in a policy.                                                                                                        | true     |
+| rules.name                              | name of the rule                                                                                                                                           | true     |
+| rules.enabled                           | true by default                                                                                                                                            | false    |
+| rules.type                              | Lifecycle is the only accepted value                                                                                                                       | true     |
+| rules.definition                        | Each definition is made up of one filter set and one action set                                                                                            | true     |
+| rules.definition.filters.blobTypes      | An array of predefined enum values.                                                                                                                        | true     |
+| rules.definition.filters.prefixMatch    | An array of strings for prefixes to be match. Each rule can define up to 10 prefixes. A prefix string must start with a container name.                    | false    |
+| rules.definition.filters.blobIndexMatch | An array of dictionary values consisting of blob index tag key and value conditions to be matched. Each rule can define up to 10 blob index tag condition. | false    |
 
 There are several possible actions:
 
-| action name | available for block blob | available for append blob | available for snapshots|
-|--|--|--|--|
-| tierToCool | ✅ | ❌ | ✅ |
-| enableAutoTierToHotFromCool | ✅ | ❌ | ❌ |
-| tierToArchive | ✅ | ❌ | ✅ |
-| delete | ✅ | ✅ | ✅ |
+| action name                 | available for block blob | available for append blob | available for snapshots |
+| --------------------------- | ------------------------ | ------------------------- | ----------------------- |
+| tierToCool                  | ✅                       | ❌                        | ✅                      |
+| enableAutoTierToHotFromCool | ✅                       | ❌                        | ❌                      |
+| tierToArchive               | ✅                       | ❌                        | ✅                      |
+| delete                      | ✅                       | ✅                        | ✅                      |
 
 Each action runs based on the age of the last action to the blob.
 
-| run condition | description |
-|--|--|
-| `daysAfterModificationGreaterThan` | The condition for base blob actions |
-| `daysAfterCreationGreaterThan` | The condition for blob snapshot actions |
-| `daysAfterLastAccessTimeGreaterThan` | The condition for a current version of a blob *when access tracking is enabled* |
+| run condition                        | description                                                                                                                          |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `daysAfterModificationGreaterThan`   | The condition for base blob actions                                                                                                  |
+| `daysAfterCreationGreaterThan`       | The condition for blob snapshot actions                                                                                              |
+| `daysAfterLastAccessTimeGreaterThan` | The condition for a current version of a blob _when access tracking is enabled_                                                      |
 | `daysAfterLastTierChangeGreaterThan` | This condition **applies only to tierToArchive actions** and can be used only with the `daysAfterModificationGreaterThan` condition. |

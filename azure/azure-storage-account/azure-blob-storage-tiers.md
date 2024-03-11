@@ -8,12 +8,12 @@ To manage [[azure-blob-storage]] costs better, you have to pick the right storag
 
 The following considerations apply to the different access tiers:
 
-* The access tier can be set on a blob during or after upload.
-* **Only the hot and cool access tiers can be set at the account level**. The archive access tier can only be set at the blob level.
-* Data in the cool access tier has slightly lower availability, but still has high durability, retrieval latency, and throughput characteristics similar to hot data.
-* **Data in the archive access tier is stored offline**. The archive tier offers the lowest storage costs but also the highest access costs and latency.
-* **The hot and cool tiers support all [[azure-storage-redundancy-types]] options**. The archive tier supports only LRS, GRS, and RA-GRS.
-* **Data storage limits are set at the account level and not per access tier**. You can choose to use all of your limit in one tier or across all three tiers.
+- The access tier can be set on a blob during or after upload.
+- **Only the hot and cool access tiers can be set at the account level**. The archive access tier can only be set at the blob level.
+- Data in the cool access tier has slightly lower availability, but still has high durability, retrieval latency, and throughput characteristics similar to hot data.
+- **Data in the archive access tier is stored offline**. The archive tier offers the lowest storage costs but also the highest access costs and latency.
+- **The hot and cool tiers support all [[azure-storage-redundancy-types]] options**. The archive tier supports only LRS, GRS, and RA-GRS.
+- **Data storage limits are set at the account level and not per access tier**. You can choose to use all of your limit in one tier or across all three tiers.
 
 ## Hot tier
 
@@ -25,8 +25,8 @@ In the Hot tier, you keep your resources always available: it's **good for data 
 
 Some considerations:
 
-* can be set at account level;
-* can be set at blob level, during or after the upload;
+- can be set at account level;
+- can be set at blob level, during or after the upload;
 
 ## Cool tier
 
@@ -38,9 +38,9 @@ This tier is good **for data that is accessed infrequently** and that does not c
 
 Some considerations:
 
-* can be set at account level;
-* can be set at blob level, during or after the upload;
-* has lower SLA for availability, but higher SLA for durability, latency, and thoughput.
+- can be set at account level;
+- can be set at blob level, during or after the upload;
+- has lower SLA for availability, but higher SLA for durability, latency, and thoughput.
 
 ## Cold tier
 
@@ -50,10 +50,10 @@ This tier is good **for data that is accessed infrequently** and that does not c
 
 Some considerations:
 
-* can be set at account level;
-* can be set at blob level, during or after the upload;
-* has lower SLA for availability, but higher SLA for durability, latency, and thoughput.
-  
+- can be set at account level;
+- can be set at blob level, during or after the upload;
+- has lower SLA for availability, but higher SLA for durability, latency, and thoughput.
+
 ## Archive tier
 
 This tier is for archiving data, so its costs are **very high for data access** and **very low for data storage**.
@@ -77,8 +77,8 @@ Rehydrating a blob can take several hours, depending on the size of the blob. Mi
 
 You can define the priority of the rehydration of a blob by setting the `x-ms-rehydrate-priority` header in the Set Blob Tier or the Copy Blob operation. It has two values:
 
-* Standard: blobs are rehydrated following the order of requests. It may take 15 hours;
-* High: prioritizes the rehydration. Ideal for blobs of less than 10 GB in size. It can take 1 our to rehydrate the blob.
+- Standard: blobs are rehydrated following the order of requests. It may take 15 hours;
+- High: prioritizes the rehydration. Ideal for blobs of less than 10 GB in size. It can take 1 our to rehydrate the blob.
 
 Since you cannot copy a blob to the same location maintaining the same name, when you have to copy a blob to rehydrate it you have to either change its name or choose another containter.
 

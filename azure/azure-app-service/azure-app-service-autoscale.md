@@ -16,7 +16,7 @@ Autoscaling doesn't have any effect on the CPU power, memory, or storage capacit
 
 Autoscaling makes its decisions based on rules that you define. A rule specifies the **threshold for a metric**, and triggers an autoscale event when this threshold is crossed. Autoscaling can also deallocate resources when the workload has diminished.
 
-Autoscaling should only be used on *genuine* requests. For example, a [[DoS]] attack will flood the server with malicious resources. Trying to handle these requests is useless (and expensive), so it's better to detect them and discard them.
+Autoscaling should only be used on _genuine_ requests. For example, a [[DoS]] attack will flood the server with malicious resources. Trying to handle these requests is useless (and expensive), so it's better to detect them and discard them.
 
 Autoscaling provides [[elasticity]] for your services, allowing you to add resources during peaks like special events or remove resources during weekends. It also improves [[availability]] and [[Fault tolerance]], ensuring that client requests won't be rejected because the instance has crashed.
 
@@ -53,7 +53,7 @@ An **autoscale rule** specifies a metric to monitor and how autoscaling should r
 
 Autoscale works by analyzing trends in metric values over time across all instances. This analysis is a multi-step process:
 
-1. Aggregate values for the metrics for all instances across a period of time called **time grain**. Generally, the time grain is 1 minute. Then it aggregates the values (available **time grain statistics** are *Average*, *Minimum*, *Maximum*, *Sum*, *Last*, *Count*), and stores the aggreagate value (known as **time aggregation**).
+1. Aggregate values for the metrics for all instances across a period of time called **time grain**. Generally, the time grain is 1 minute. Then it aggregates the values (available **time grain statistics** are _Average_, _Minimum_, _Maximum_, _Sum_, _Last_, _Count_), and stores the aggreagate value (known as **time aggregation**).
 2. After a user-defined period (known as **duration**), the process re-runs the calculations. Duration must be longer than time grain. **The minimum duration value is 5 minutes**.
 
 An autoscale action has a **cool down period**, specified in minutes (minimum 5 minutes), during which the scale rules won't be triggered again. This is done to stabilize the system between autoscale events.
@@ -80,7 +80,7 @@ All autoscale successes and failures are logged in the Activity Log. You can the
 ## Best practices
 
 1. Ensure the maximum and minimum values are different and have an adequate margin between them;
-2. Choose the appropriate statistic for your diagnostics metric. The most common statistic is *Average*.
+2. Choose the appropriate statistic for your diagnostics metric. The most common statistic is _Average_.
 3. Carefully choose the threshold. To avoid **Flapping**, the scale-out and scale-in criteria should be carefully planned.
 4. Choose a safe default instance count. It's necessary because, when metrics are not available, the service gets scaled to that number.
 5. Configure custom notifications (email, webhook) to get notified when an autoscale activity occurs (or fails).

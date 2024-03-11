@@ -1,5 +1,4 @@
 ---
- 
 tags: azure, cloud, azure-certifications/az900, azure-cli
 ---
 

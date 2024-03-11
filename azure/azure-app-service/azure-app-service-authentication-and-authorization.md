@@ -40,11 +40,11 @@ The authentication flow is the same for all providers, but differs depending on 
 
 ### With provider SDK
 
- The application signs users in to the provider manually and then **submits the authentication token to App Service** for validation.
+The application signs users in to the provider manually and then **submits the authentication token to App Service** for validation.
 
- This is typically the case with **browser-less apps**, which can't present the provider's sign-in page to the user.
+This is typically the case with **browser-less apps**, which can't present the provider's sign-in page to the user.
 
- The application code manages the sign-in process, so it's also called **client-directed flow** or **client flow**. This applies to REST APIs, Azure Functions, JavaScript browser clients, and native mobile apps that sign users in using the provider's SDK.
+The application code manages the sign-in process, so it's also called **client-directed flow** or **client flow**. This applies to REST APIs, Azure Functions, JavaScript browser clients, and native mobile apps that sign users in using the provider's SDK.
 
 Steps are:
 
@@ -64,16 +64,14 @@ Steps are:
 1. **Sign user in**: Redirects client to `/.auth/login/<provider>`;
 2. **Post-authentication**: Provider redirects client to `/.auth/login/<provider>/callback`.
 3. **Establish authenticated session**: App Service adds authenticated cookie to response.
-4. **Serve authenticated content**: Client includes authentication cookie in subsequent requests (*automatically handled by browser*).
+4. **Serve authenticated content**: Client includes authentication cookie in subsequent requests (_automatically handled by browser_).
 
 ## What happens when a request is not authenticated
 
 You can configure App Services to act in two ways when a request is not authenticated:
 
 - **Allow unauthenticated requests**: this options **defers authentication to the application code**. It gives flexibility in handling anonymous requests. It lets you present **multiple sign-in providers to your users**.
-- **Require authentication**: This option rejects any unauthenticated traffic to your application. Two possible behaviors:
-        1. If the application is browser-based, this rejection can be a redirect action to one of the configured identity providers.
-        2. If the application is a mobile app, it returns a HTTP 401 or HTTP 403 response.
+- **Require authentication**: This option rejects any unauthenticated traffic to your application. Two possible behaviors: 1. If the application is browser-based, this rejection can be a redirect action to one of the configured identity providers. 2. If the application is a mobile app, it returns a HTTP 401 or HTTP 403 response.
 
 ## Token store
 

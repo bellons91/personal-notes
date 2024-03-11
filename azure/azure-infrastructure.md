@@ -1,6 +1,7 @@
 ---
 tags: azure,   azure-certifications/az900
 ---
+
 # Azure infrastructure
 
 Azure is structured into sub parts.

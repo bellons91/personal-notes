@@ -10,17 +10,17 @@ Blob storage can manage thousands of simultaneous uploads.
 
 Blob storage is ideal for:
 
-* Serving images or documents directly to a browser.
-* Storing files for distributed access.
-* Streaming video and audio.
-* Storing data for backup and restore, disaster recovery, and archiving.
-* Storing data for analysis by an on-premises or Azure-hosted service.
+- Serving images or documents directly to a browser.
+- Storing files for distributed access.
+- Streaming video and audio.
+- Storing data for backup and restore, disaster recovery, and archiving.
+- Storing data for analysis by an on-premises or Azure-hosted service.
 
 Objects can be accessed via HTTP or HTTPS, given that every object can be referenced using a specific URL.
 
 **An [[azure-storage-account-scripts]] is the top-level container** for all of your Azure Blob storage. The storage account provides a unique namespace for your Azure Storage data.
 
-This service provides a list of endpoints available at  https://{storage-account-name}.blob.core.windows.net
+This service provides a list of endpoints available at https://{storage-account-name}.blob.core.windows.net
 
 Each Storage Account contains one or more [[azure-blob-container]], and each Blob Container contains
 
@@ -60,14 +60,14 @@ Encryption relies on keys. You have three options to handle keys:
 2. create **customer-managed keys** to encrypt and decrypt all data in the storage account. A customer-managed key is used to encrypt all data in all services in your storage account.
 3. use a **customer-provided key** on Blob storage operations. A client making a read or write request against Blob storage can include an encryption key on the request for granular control over how blob data is encrypted and decrypted.
 
-| -- | Microsoft-managed keys |Customer-managed keys |Customer-provided keys|
-|--|--|--|--|
-|Encryption/decryption operations| Azure| Azure| Azure|
-|Azure Storage services supported| All |Blob storage, Azure Files| Blob storage|
-|Key storage| Microsoft key store| Azure Key Vault Azure |Key Vault or any other key store|
-|Key rotation responsibility| Microsoft |Customer |Customer|
-|Key usage| Microsoft| Azure portal, Storage Resource Provider REST API, Azure Storage management libraries, PowerShell, CLI| Azure Storage REST API (Blob storage), Azure Storage client libraries|
-|Key access| Microsoft only| Microsoft, Customer| Customer only|
+| --                               | Microsoft-managed keys | Customer-managed keys                                                                                 | Customer-provided keys                                                |
+| -------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Encryption/decryption operations | Azure                  | Azure                                                                                                 | Azure                                                                 |
+| Azure Storage services supported | All                    | Blob storage, Azure Files                                                                             | Blob storage                                                          |
+| Key storage                      | Microsoft key store    | Azure Key Vault Azure                                                                                 | Key Vault or any other key store                                      |
+| Key rotation responsibility      | Microsoft              | Customer                                                                                              | Customer                                                              |
+| Key usage                        | Microsoft              | Azure portal, Storage Resource Provider REST API, Azure Storage management libraries, PowerShell, CLI | Azure Storage REST API (Blob storage), Azure Storage client libraries |
+| Key access                       | Microsoft only         | Microsoft, Customer                                                                                   | Customer only                                                         |
 
 ## How to operate with Azure Blob Storage using REST APIs
 

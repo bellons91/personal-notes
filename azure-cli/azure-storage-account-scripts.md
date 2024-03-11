@@ -1,7 +1,7 @@
 ---
 type: basic-note
 foam_template:
-  filepath: './azure-cli/create-azure-storage-account.md'
+  filepath: "./azure-cli/create-azure-storage-account.md"
 tags: azure, cloud, cli
 ---
 

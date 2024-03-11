@@ -6,11 +6,11 @@ tags: azure, cloud, azure-certifications/az204
 
 ## Application settings
 
-In Azure App Services, configurations are stored as *environment variables*.
+In Azure App Services, configurations are stored as _environment variables_.
 
-App settings are always encrypted when stored (*encrypted-at-rest*).
+App settings are always encrypted when stored (_encrypted-at-rest_).
 
-If you are using [[azure-app-services-deployment-slots]], you can mark a setting as *swappable*.
+If you are using [[azure-app-services-deployment-slots]], you can mark a setting as _swappable_.
 
 Note: **the key format changes for Linux-based containers**. Instead of using `Key:SubKey` you have to use `Key__SubKey`.
 
@@ -22,16 +22,16 @@ Depending on the values, the application might require to scale up to a higher p
 
 Examples are:
 
-* **Stack settings**: language and SDK version;
-* **Platform settings**: used to configure the hosting platform.
-  * **Bitness**: 32- or 64-bit;
-  * **WebSocket protocol**: useful for SignalR;
-  * **[[always-on]]**: disabled by default;
-  * **Managed pipeline version**: The IIS pipeline mode. Set it to *Classic* if you have a legacy app that requires an older version of IIS.
-  * **HTTP version**: Set to 2.0 to enable support for HTTPS/2 protocol.
-  * **[[general/arr-affinity]]**:  In a multi-instance deployment, ensure that the client is routed to the same instance for the life of the session. You can set this option to *Off* for stateless applications.
-* **Debugging**: Enable remote debugging for ASP.NET, ASP.NET Core, or Node.js apps. This option turns off automatically after 48 hours.
-* **Incoming client certificates**: require client certificates in mutual authentication. [[tls]] mutual authentication is used to restrict access to your app by enabling different types of authentication for it.
+- **Stack settings**: language and SDK version;
+- **Platform settings**: used to configure the hosting platform.
+  - **Bitness**: 32- or 64-bit;
+  - **WebSocket protocol**: useful for SignalR;
+  - **[[always-on]]**: disabled by default;
+  - **Managed pipeline version**: The IIS pipeline mode. Set it to _Classic_ if you have a legacy app that requires an older version of IIS.
+  - **HTTP version**: Set to 2.0 to enable support for HTTPS/2 protocol.
+  - **[[general/arr-affinity]]**: In a multi-instance deployment, ensure that the client is routed to the same instance for the life of the session. You can set this option to _Off_ for stateless applications.
+- **Debugging**: Enable remote debugging for ASP.NET, ASP.NET Core, or Node.js apps. This option turns off automatically after 48 hours.
+- **Incoming client certificates**: require client certificates in mutual authentication. [[tls]] mutual authentication is used to restrict access to your app by enabling different types of authentication for it.
 
 ## Path mappings
 
@@ -45,7 +45,7 @@ For Windows apps, you can customize the IIS handler mappings and virtual applica
 
 Handler mappings let you add custom script processors to handle requests for specific file extensions.
 
-**Each app has the default root path (/) mapped to *D:\home\site\wwwroot***, where your code is deployed by default. If your app root is in a different folder, or if your repository has more than one application, you can edit or add virtual applications and directories.
+**Each app has the default root path (/) mapped to _D:\home\site\wwwroot_**, where your code is deployed by default. If your app root is in a different folder, or if your repository has more than one application, you can edit or add virtual applications and directories.
 
 You can configure virtual applications and directories by specifying each virtual directory and its corresponding physical path relative to the website root (D:\home). To mark a virtual directory as a web application, clear the Directory check box.
 
@@ -113,8 +113,8 @@ If you configure the Azure Storage blobs option for a log type, you need a clien
 
 For logs stored in the App Service file system, the easiest way is to download the ZIP file in the browser at:
 
-* Linux/container apps: `https://<app-name>.scm.azurewebsites.net/api/logs/docker/zip`
-* Windows apps: `https://<app-name>.scm.azurewebsites.net/api/dump`
+- Linux/container apps: `https://<app-name>.scm.azurewebsites.net/api/logs/docker/zip`
+- Windows apps: `https://<app-name>.scm.azurewebsites.net/api/dump`
 
 For Linux/container apps, the ZIP file contains console output logs for both the docker host and the docker container.
 
@@ -130,7 +130,7 @@ A certificate uploaded into an app is stored in a deployment unit that is bound 
 
 You can either:
 
-* **Create a free App Service managed certificate**: you need a Basic, Standard, Premium or Isolated tier; it's a TLS/SSL server certificate that's fully managed by App Service and **renewed continuously and automatically in six-month increments**, 45 days before expiration. You create the certificate and bind it to a custom domain, and let App Service do the rest.
-* Purchase an App Service certificate;
-* **Import a certificate from Key Vault**: the certificate is then stored in [[azure-key-vault]];
-* Upload a private certificate (it must be stored in a [[pfx-file]] and encrypted with [[triple-des]])
+- **Create a free App Service managed certificate**: you need a Basic, Standard, Premium or Isolated tier; it's a TLS/SSL server certificate that's fully managed by App Service and **renewed continuously and automatically in six-month increments**, 45 days before expiration. You create the certificate and bind it to a custom domain, and let App Service do the rest.
+- Purchase an App Service certificate;
+- **Import a certificate from Key Vault**: the certificate is then stored in [[azure-key-vault]];
+- Upload a private certificate (it must be stored in a [[pfx-file]] and encrypted with [[triple-des]])

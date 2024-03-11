@@ -45,5 +45,3 @@ returns, for example,
 ]
 
 ```
-
-

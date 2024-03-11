@@ -2,7 +2,6 @@
 tags: azure, cloud, azure-certifications/az900, azure-cli, networking
 ---
 
-
 # Operations on Azure Virtual Network with Cloud CLI
 
 This page lists some scripts useful for operating on [[azure-virtual-network]].

@@ -38,7 +38,7 @@ Availability sets allow you to use different power sources, network connectivity
 
 Two ways to define Availability Sets:
 
-- **Update domain groups**: you create a group with a subset of VMs to be updated at the same time. This way, you know that all the other VMs will be up while this group is being updated. Azure will wait 30 minutes before updating another *update domain group*.
+- **Update domain groups**: you create a group with a subset of VMs to be updated at the same time. This way, you know that all the other VMs will be up while this group is being updated. Azure will wait 30 minutes before updating another _update domain group_.
 - **Fault domain groups**: groups that have in common the same physical infrastructure (network and/or power). By default, an availability set will split your VMs across up to **three fault domains**.
 
 ## Additional resources

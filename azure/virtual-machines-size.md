@@ -9,5 +9,3 @@ You can choose the size of a Virtual machine. The bigger the size, the higher th
 If you move from one level to the next one, you **double the costs**. Similarly, if you move to the previous one, you cut the costs in half.
 
 Picking the correct [[azure-virtual-machines]] size helps you to [[optimize-virtual-machines]].
-
-

@@ -1,0 +1,14 @@
+{
+  "name": "personal-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bellons91/personal-notes",
+  "author": "Davide Bellone",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.md\""
+  },
+  "devDependencies": {
+    "prettier": "2.8.8"
+  }
+}

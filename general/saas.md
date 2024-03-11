@@ -14,7 +14,6 @@ Clients are responsible for:
 - connected devices
 - user policies
 
-
 ## List of Azure Services
 
 - Azure DevOps
@@ -23,4 +22,4 @@ Clients are responsible for:
 - [[azure-advisor]]
 - Azure Backup
 - [[azure-cloud-shell]]
-- 
+-

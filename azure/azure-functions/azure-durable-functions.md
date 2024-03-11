@@ -10,7 +10,7 @@ The extension lets you define stateful workflows by writing **orchestrator funct
 
 Behind the scenes, the extension manages state, checkpoints, and restarts for you, allowing you to focus on your business logic.
 
-The primary use case for Durable Functions is simplifying complex, stateful coordination requirements in serverless applications. Examples of  typical application patterns that can benefit from Durable Functions are:
+The primary use case for Durable Functions is simplifying complex, stateful coordination requirements in serverless applications. Examples of typical application patterns that can benefit from Durable Functions are:
 
 - Function chaining
 - Fan-out/fan-in
@@ -200,9 +200,9 @@ public static Task DispatchAsync([EntityTrigger] TaskEntityDispatcher dispatcher
                 break;
             case "get":
                 return new(operation.State.GetState<int>());
-            case "delete": 
+            case "delete":
                 operation.State.SetState(null);
-                break; 
+                break;
         }
 
         return default;

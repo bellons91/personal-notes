@@ -17,5 +17,3 @@ var damageResult = await Task.Run(() => CalculateDamageDone());
 If the work you have is CPU-bound and you care about responsiveness, use async and await, but spawn off the work on another thread with Task.Run.
 
 If the work is appropriate for concurrency and parallelism, also consider using the Task Parallel Library.
-
-

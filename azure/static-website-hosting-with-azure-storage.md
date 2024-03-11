@@ -17,7 +17,7 @@ Also, [[AuthN]] and [[AuthZ]] aren't supported.
 
 Static website hosting is a feature that you have to enable on the storage account.
 
-You can modify the public access level of the *$web* container, but making this modification has no impact on the primary static website endpoint because these files are served through **anonymous access requests**. That means public (read-only) access to all files.
+You can modify the public access level of the _$web_ container, but making this modification has no impact on the primary static website endpoint because these files are served through **anonymous access requests**. That means public (read-only) access to all files.
 
 While the primary static website endpoint isn't affected, **a change to the public access level does impact the primary blob service endpoint**.
 

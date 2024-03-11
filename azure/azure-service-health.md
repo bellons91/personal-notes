@@ -4,7 +4,7 @@ tags: azure, cloud, azure-certifications/az900
 
 # Azure Service Health
 
- Azure Service Health helps you keep track of Azure resources, both your specifically deployed resources and the overall status of Azure.
+Azure Service Health helps you keep track of Azure resources, both your specifically deployed resources and the overall status of Azure.
 
 ## Azure Status
 

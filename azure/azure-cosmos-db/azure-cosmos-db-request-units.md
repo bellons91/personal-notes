@@ -4,9 +4,9 @@ tags: azure, cloud, azure-certifications/az204, azure-cosmos-db
 
 # Azure CosmosDB Request Units
 
- A request unit represents the system resources such as [[CPU]], [[IOPS]], and memory that are required to perform the database operations supported by Azure Cosmos DB.
+A request unit represents the system resources such as [[CPU]], [[IOPS]], and memory that are required to perform the database operations supported by Azure Cosmos DB.
 
-The cost to do a point read, which is fetching a single item by its ID *and* partition key value, for a 1-KB item is 1RU.
+The cost to do a point read, which is fetching a single item by its ID _and_ partition key value, for a 1-KB item is 1RU.
 
 The type of Azure Cosmos DB account you're using determines the way consumed RUs get charged. There are three modes in which you can create an account:
 

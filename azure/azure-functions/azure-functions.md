@@ -14,10 +14,10 @@ Azure Functions supports **triggers**, which are ways to start the execution of 
 
 ## Use cases
 
-* you don't care about the underlying infrastructure;
-* you have to respond to an event;
-* the work will take not more than a few seconds;
-* you need **automatic scalability**;
+- you don't care about the underlying infrastructure;
+- you have to respond to an event;
+- the work will take not more than a few seconds;
+- you need **automatic scalability**;
 
 ## Functions timeout
 
@@ -31,13 +31,13 @@ The same storage account used by your function app can also be used by your trig
 
 ## Hosting plans
 
-| Plan  | Benefits | Available on  |Scale out| Max # of instances | Function app timeout (minutes) |
-|--|--|--|--|--|--|
-|Consumption plan|It scales automatically, and **you only pay for compute resources when your functions are running**. **Instances of the Functions host are dynamically added and removed** based on the number of incoming events.| Windows, Linux| **Event driven**. Scale-out automatically, even during periods of high load. Azure Functions infrastructure **scales CPU and memory resources by adding more instances of the Functions host**, based on the number of incoming trigger events. |Windows: 200. Linux: 100. This is the max instances given on a **per-function app** basis.| 5 (default) to 10 (max)|
-|Premium plan | Automatically scales based on demand using **pre-warmed workers**, which run applications with no delay after being idle, run on more powerful instances, and **connect to virtual networks**.| Windows, Linux| Event driven|Windows: 100. Linux: 20-100 Per-plan basis. | 30 (default) to unlimited|
-|Dedicated plan|Run your functions within an App Service plan at regular App Service plan rates. Best **for long-running scenarios** where Durable Functions can't be used.|Windows, Linux|Manual/autoscale | 10-20|30 (default) to unlimited|
-| ASE | [[App Service Environment]] (ASE) is an App Service feature that provides a fully isolated and dedicated environment for securely running App Service apps at high scale. **Note: you should configure this App Service Plan to be always-on in order to get have the trigger work immediately**. | | Manual/autoscale| 100 | |
-|Kubernetes |Fully isolated and dedicated environment running on top of the Kubernetes platform.| Direct or with [[azure-arc]]|Event-driven autoscale for Kubernetes clusters using KEDA. |Varies by cluster| |
+| Plan             | Benefits                                                                                                                                                                                                                                                                                          | Available on                 | Scale out                                                                                                                                                                                                                                       | Max # of instances                                                                         | Function app timeout (minutes) |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------ |
+| Consumption plan | It scales automatically, and **you only pay for compute resources when your functions are running**. **Instances of the Functions host are dynamically added and removed** based on the number of incoming events.                                                                                | Windows, Linux               | **Event driven**. Scale-out automatically, even during periods of high load. Azure Functions infrastructure **scales CPU and memory resources by adding more instances of the Functions host**, based on the number of incoming trigger events. | Windows: 200. Linux: 100. This is the max instances given on a **per-function app** basis. | 5 (default) to 10 (max)        |
+| Premium plan     | Automatically scales based on demand using **pre-warmed workers**, which run applications with no delay after being idle, run on more powerful instances, and **connect to virtual networks**.                                                                                                    | Windows, Linux               | Event driven                                                                                                                                                                                                                                    | Windows: 100. Linux: 20-100 Per-plan basis.                                                | 30 (default) to unlimited      |
+| Dedicated plan   | Run your functions within an App Service plan at regular App Service plan rates. Best **for long-running scenarios** where Durable Functions can't be used.                                                                                                                                       | Windows, Linux               | Manual/autoscale                                                                                                                                                                                                                                | 10-20                                                                                      | 30 (default) to unlimited      |
+| ASE              | [[App Service Environment]] (ASE) is an App Service feature that provides a fully isolated and dedicated environment for securely running App Service apps at high scale. **Note: you should configure this App Service Plan to be always-on in order to get have the trigger work immediately**. |                              | Manual/autoscale                                                                                                                                                                                                                                | 100                                                                                        |                                |
+| Kubernetes       | Fully isolated and dedicated environment running on top of the Kubernetes platform.                                                                                                                                                                                                               | Direct or with [[azure-arc]] | Event-driven autoscale for Kubernetes clusters using KEDA.                                                                                                                                                                                      | Varies by cluster                                                                          |                                |
 
 ## Scaling
 
@@ -61,44 +61,44 @@ For HTTP triggers, new instances are allocated, at most, once per second. For no
 
 You may need to define a limit to the maximum number of instances. You can define a value for the `functionAppScaleLimit` configuration:
 
-* `0` or `null` to have an unrestricted number of instances;
-* `1` to the max number of instances depending on the Plan (200 for Consumption, 100 for Premium).
+- `0` or `null` to have an unrestricted number of instances;
+- `1` to the max number of instances depending on the Plan (200 for Consumption, 100 for Premium).
 
 ## Development
 
 A **function** is made of:
 
-* the code, which can be written in many languages;
-* the configs, stored in the `function.json` file;
+- the code, which can be written in many languages;
+- the configs, stored in the `function.json` file;
 
 Some notes about the `function.json` file:
 
-* It is automatically generated for compiled languages, using the annotations written in the function code;
-* Must be created manually for scripted languages;
-* Contains a node named `bindings` which contains the **trigger**, the **bindings**, and configuration settings. **Each function has exactly one trigger**, but can have other bindings.
+- It is automatically generated for compiled languages, using the annotations written in the function code;
+- Must be created manually for scripted languages;
+- Contains a node named `bindings` which contains the **trigger**, the **bindings**, and configuration settings. **Each function has exactly one trigger**, but can have other bindings.
 
 The `function.json` file has this shape:
 
 ```json
 {
-    "disabled":false,
-    "bindings":[
-        // ... bindings here
-        {
-            "type": "bindingType",
-            "direction": "in",
-            "name": "myParamName",
-            // ... more depending on binding
-        }
-    ]
+  "disabled": false,
+  "bindings": [
+    // ... bindings here
+    {
+      "type": "bindingType",
+      "direction": "in",
+      "name": "myParamName"
+      // ... more depending on binding
+    }
+  ]
 }
 ```
 
-The *bindings* node contains both the trigger and the other bindings. Each item requires at least these settings:
+The _bindings_ node contains both the trigger and the other bindings. Each item requires at least these settings:
 
-* `type`: name of the binding/trigger;
-* `direction`: indicates whether the binding is for receiving data into the function or sending data from the function. For example, `in` or `out`.
-* `name`: name used for the binding.
+- `type`: name of the binding/trigger;
+- `direction`: indicates whether the binding is for receiving data into the function or sending data from the function. For example, `in` or `out`.
+- `name`: name used for the binding.
 
 Functions are grouped in a Function App. The Function App has some other configurations stored in the `host.json` file, which contains runtime-specific configurations.
 
@@ -108,24 +108,22 @@ Triggers and bindings let you avoid hardcoding access to other services. Your fu
 
 Triggers:
 
-* exactly one per function;
-* can have associated data (a payload)
-* the direction is always *in*
+- exactly one per function;
+- can have associated data (a payload)
+- the direction is always _in_
 
 [[aggiungi tipi di trigger]]
 
-
-
 Bindings:
 
-* allow you to connect to other resources;
-* can be *input bindings* or *output bindings*;
-* optional
-* a function might have one or multiple input and/or output bindings
-* some bindings have a *inout* direction.
-* as output binding, you can use the return value of the function.
+- allow you to connect to other resources;
+- can be _input bindings_ or _output bindings_;
+- optional
+- a function might have one or multiple input and/or output bindings
+- some bindings have a _inout_ direction.
+- as output binding, you can use the return value of the function.
 
-Example of *function.json* file with both input and output bindings:
+Example of _function.json_ file with both input and output bindings:
 
 ```js
 {
@@ -160,11 +158,11 @@ using Newtonsoft.Json.Linq;
 // The method return value creates a new row in Table Storage
 public static Person Run(JObject order, ILogger log)
 {
-    return new Person() { 
-            PartitionKey = "Orders", 
-            RowKey = Guid.NewGuid().ToString(),  
+    return new Person() {
+            PartitionKey = "Orders",
+            RowKey = Guid.NewGuid().ToString(),
             Name = order["Name"].ToString(),
-            MobileNumber = order["MobileNumber"].ToString() };  
+            MobileNumber = order["MobileNumber"].ToString() };
 }
 
 public class Person
@@ -210,8 +208,8 @@ Notice that **the Connection value refers to a configuration key, and does not c
 
 Some functions may require the use of an identity instead of a secret:
 
-* Identity-based connections use a Managed Identity;
-* Identity-based connections are *not* supported by Durable Functions;
-* By default, it uses the system-assigned identity. However, you can specify `credential` and `clientID` to use a user-assigned identity;
-* When developing locally, the developer identity is used.
-* Done by assigning a role in [[azure-rbac]] or specifying the identity in an access policy, depending on the service to which you're connecting
+- Identity-based connections use a Managed Identity;
+- Identity-based connections are _not_ supported by Durable Functions;
+- By default, it uses the system-assigned identity. However, you can specify `credential` and `clientID` to use a user-assigned identity;
+- When developing locally, the developer identity is used.
+- Done by assigning a role in [[azure-rbac]] or specifying the identity in an access policy, depending on the service to which you're connecting

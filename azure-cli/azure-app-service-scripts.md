@@ -1,7 +1,7 @@
 ---
 type: basic-note
 foam_template:
-  filepath: './azure-cli/azure-app-service-scripts.md'
+  filepath: "./azure-cli/azure-app-service-scripts.md"
 tags: azure, cloud, cli
 ---
 
@@ -30,7 +30,7 @@ List available IP addresses
 ```bash
 az webapp show \
     --resource-group <group_name> \
-    --name <app_name> \ 
+    --name <app_name> \
     --query outboundIpAddresses \
     --output tsv
 ```
@@ -39,10 +39,8 @@ To find all possible outbound IP addresses for your app, regardless of pricing t
 
 ```bash
 az webapp show \
-    --resource-group <group_name> \ 
-    --name <app_name> \ 
+    --resource-group <group_name> \
+    --name <app_name> \
     --query possibleOutboundIpAddresses \
     --output tsv
 ```
-
-

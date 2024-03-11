@@ -22,7 +22,7 @@ Swapping between the source slot (e.g., staging) and the target slot (e.g., prod
 2. **Wait for validation**: if the slot is configured to show a preview, the system waits for the validation of the slot before proceeding.
 3. **Wait for every instance in the source slot to complete its restart**: if any instance fails to restart, then the system reverts all the changes and stops the swapping;
 4. **Initialize local cache**: to wake up the local cache, call the `/` endpoint of each instance on the source slot. This causes the restart of the instances;
-5. If auto-swap is enabled with custom warm-up, **initialize each instance in the source slot by calling the `/` endpoint**. If an instance returns *any* HTTP response, it's considered to be warmed up.
+5. If auto-swap is enabled with custom warm-up, **initialize each instance in the source slot by calling the `/` endpoint**. If an instance returns _any_ HTTP response, it's considered to be warmed up.
 6. When all the source slots are warmed up, **switch the routing rules for the two slots**. Now, the source slot becomes the new target slot, and vice versa.
 7. Apply steps 1-5 to warm up the "new" source slot in case another swap is required.
 
@@ -57,7 +57,7 @@ Other configuration elements stay in the same slot after a swap (**slot specific
 - Service endpoints (planned to be unswapped)
 - Path mappings
 
-You can make one setting stick to a specific slot by editing the *Deployment slot setting* page.
+You can make one setting stick to a specific slot by editing the _Deployment slot setting_ page.
 
 You can make all settings (except for the ones related to Managed Identity) swappable by setting the `WEBSITE_OVERRIDE_PRESERVE_DEFAULT_STICKY_SLOT_SETTINGS` to `0` or `false`. Every setting then becomes swappable.
 
@@ -73,9 +73,9 @@ You can make all settings (except for the ones related to Managed Identity) swap
 ### Swap with preview
 
 1. Select the Source and Target slot.
-2. Select *Perform swap with preview*.
+2. Select _Perform swap with preview_.
 3. Click Start Swap. This will allow you to see a preview of the slot, available at `https://<app_name>-<source-slot-name>.azurewebsites.net`.
-4. Select *Complete Swap* or *Cancel Swap*.
+4. Select _Complete Swap_ or _Cancel Swap_.
 
 ### Auto swap
 
@@ -98,7 +98,7 @@ To specify which pages to call, you must edit the `applicationInitialization` no
 </system.webServer>
 ```
 
-You can also customize the warm-up behaviour with one or more of the following *app settings*:
+You can also customize the warm-up behaviour with one or more of the following _app settings_:
 
 - `WEBSITE_SWAP_WARMUP_PING_PATH`: The path to ping to warm up your site. Add this app setting by specifying a custom path that begins with a slash as the value. An example is `/statuscheck`. The default value is `/`.
 - `WEBSITE_SWAP_WARMUP_PING_STATUSES`: Valid HTTP response codes for the warm-up operation. Add this app setting with a comma-separated list of HTTP codes. An example is 200,202 . If the returned status code isn't in the list, the warm-up and swap operations are stopped. **By default, all response codes are valid.**
@@ -114,7 +114,7 @@ You can define the percentage of clients to use the new slot by navigating under
 
 **Random** users are routed. Still, when a client is routed to a specific slot, it's pinned to that slot for the rest of the client session, thanks to the usage of the `x-ms-routing-name` cookie.
 
-If the client is pointing to the *staging* slot, the cookie will be `x-ms-routing-name=staging`.
+If the client is pointing to the _staging_ slot, the cookie will be `x-ms-routing-name=staging`.
 
 If the client is pointing to the production slot, the cookie name will be `x-ms-routing-name=self`.
 

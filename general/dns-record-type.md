@@ -56,15 +56,15 @@ Also known as a start of authority record, it contains administrative informatio
 
 ## SRV
 
-Also known as a service record, it maps a domain name to the hostname and port number of servers for a specific service. This record is used to locate services such as SIP and XMPP1. For example, an SRV record for the domain name _sip._tcp.example.com could be _sip._tcp.example.com. IN SRV 10 60 5060 sipserver.example.com.
+Also known as a service record, it maps a domain name to the hostname and port number of servers for a specific service. This record is used to locate services such as SIP and XMPP1. For example, an SRV record for the domain name \_sip.\_tcp.example.com could be \_sip.\_tcp.example.com. IN SRV 10 60 5060 sipserver.example.com.
 
 ## SSHFP
 
- Also known as a Secure Shell fingerprint record, it maps a domain name to the fingerprint of an [[SSH]] public key. This record is used to authenticate SSH connections.
+Also known as a Secure Shell fingerprint record, it maps a domain name to the fingerprint of an [[SSH]] public key. This record is used to authenticate SSH connections.
 
 ## TLSA
 
-Also known as a [[tls]] authentication record, it maps a domain name to the certificate or public key of a server. This record is used to authenticate the server’s identity and establish a secure connection. For example, a TLSA record for the domain name _443._tcp.example.com could be _443._tcp.example.com. IN TLSA 3 1 1 abcd....
+Also known as a [[tls]] authentication record, it maps a domain name to the certificate or public key of a server. This record is used to authenticate the server’s identity and establish a secure connection. For example, a TLSA record for the domain name \_443.\_tcp.example.com could be \_443.\_tcp.example.com. IN TLSA 3 1 1 abcd....
 
 ## TXT
 

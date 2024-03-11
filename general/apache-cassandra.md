@@ -1,8 +1,8 @@
 ---
 type: basic-note
 foam_template:
-  filepath: './general/apache-cassandra.md'
-tags: 
+  filepath: "./general/apache-cassandra.md"
+tags:
 ---
 
 # Apache Cassandra

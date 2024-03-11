@@ -38,8 +38,6 @@ With Azure Cosmos DB you can use **Stored Procedures, Triggers, and User-Defined
 
 For partitioned containers, when you run a stored procedure, you must provide a partition key value in the request options. **Stored procedures are always scoped to a partition key**. Items that have a different partition key value aren't visible to the stored procedure.
 
-
-
 ## Backup
 
 You can define backup policies for your data.

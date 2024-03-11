@@ -16,4 +16,4 @@ You can migrate plain data or even VM farms, SQL server instances, and other app
 
 You can use it to periodically migrate offline data to Azure.
 
-Azure Data Box can also be used for migrating data *from* Azure: it can be useful for distaster recovery scenarios or if you need exported data for security reasons.
+Azure Data Box can also be used for migrating data _from_ Azure: it can be useful for distaster recovery scenarios or if you need exported data for security reasons.

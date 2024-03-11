@@ -1,7 +1,7 @@
 ---
 type: basic-note
 foam_template:
-  filepath: './azure/azure-app-service-plan.md'
+  filepath: "./azure/azure-app-service-plan.md"
 tags: azure, cloud, azure-certifications/az204
 ---
 
@@ -25,7 +25,7 @@ App Service Plans can be reused and configured as independent entities.
 
 If you publish some applications under the same App Service Plan, when you need to scale the application the same changes are applied to all the other applications within the same App Service Plan. To scale only a single application, you have to move it to a standalone App Service Plan.
 
-You can *potentially* save money by putting multiple apps into one App Service plan. However, since apps in the same App Service plan all share the same compute resources you need to **understand the capacity of the existing App Service plan** and the expected load for the new app.
+You can _potentially_ save money by putting multiple apps into one App Service plan. However, since apps in the same App Service plan all share the same compute resources you need to **understand the capacity of the existing App Service plan** and the expected load for the new app.
 
 ## Pricing tiers
 
