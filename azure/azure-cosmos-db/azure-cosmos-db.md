@@ -30,13 +30,7 @@ Azure Cosmos DB encryption protects your data at rest by seamlessly encrypting y
 
 ## Stored procedures, Triggers, User-defined functions
 
-With Azure Cosmos DB you can use **Stored Procedures, Triggers, and User-Defined Functions**. To call a stored procedure, trigger, or user-defined function, you need to register it. **Stored procedures are registered per collection**, and can operate on any document or an attachment present in that collection.
-
-### Stored procedures
-
-**Stored procedures are written using JavaScript**. They can create, update, read, query, and delete items within an Azure Cosmos DB container.
-
-For partitioned containers, when you run a stored procedure, you must provide a partition key value in the request options. **Stored procedures are always scoped to a partition key**. Items that have a different partition key value aren't visible to the stored procedure.
+With Azure Cosmos DB you can use **Stored Procedures, Triggers, and User-Defined Functions**. See [[azure-cosmos-db-triggers-storedprocedures]].
 
 ## Backup
 
