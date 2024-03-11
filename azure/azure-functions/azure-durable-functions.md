@@ -83,7 +83,7 @@ The async HTTP API pattern addresses the problem of coordinating the state of lo
 
 ![Azure Durable Function - Async HTTP APIs](./az-dur-func-async-http-api.png)
 
-It manages long-running executions by providing built-in webhooks that will be called when the remote operation finishes.
+It manages long-running executions by providing a built-in endpoint that must be called to check if the remote operation has finished.
 
 ## Monitoring
 

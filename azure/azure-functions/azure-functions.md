@@ -112,6 +112,10 @@ Triggers:
 * can have associated data (a payload)
 * the direction is always *in*
 
+[[aggiungi tipi di trigger]]
+
+
+
 Bindings:
 
 * allow you to connect to other resources;
