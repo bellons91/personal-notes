@@ -32,7 +32,7 @@ Azure Cosmos DB encryption protects your data at rest by seamlessly encrypting y
 
 With Azure Cosmos DB you can use **Stored Procedures, Triggers, and User-Defined Functions**. To call a stored procedure, trigger, or user-defined function, you need to register it.
 
-See [[azure-cosmos-db-stored-procedures]], [[azure-cosmos-db-triggers]].
+See [[azure-cosmos-db-stored-procedures]], [[azure-cosmos-db-triggers]], and [[azure-cosmos-db-user-defined-functions]].
 
 ## Backup
 
