@@ -30,7 +30,9 @@ Azure Cosmos DB encryption protects your data at rest by seamlessly encrypting y
 
 ## Stored procedures, Triggers, User-defined functions
 
-With Azure Cosmos DB you can use **Stored Procedures, Triggers, and User-Defined Functions**. See [[azure-cosmos-db-triggers-storedprocedures]].
+With Azure Cosmos DB you can use **Stored Procedures, Triggers, and User-Defined Functions**. To call a stored procedure, trigger, or user-defined function, you need to register it.
+
+See [[azure-cosmos-db-stored-procedures]], [[azure-cosmos-db-triggers]].
 
 ## Backup
 
@@ -49,3 +51,15 @@ Backup can be stored redundantly, using either Local-redundant storage or Geo-re
 - **[[apache-cassandra]]**: data is stored in a **column-oriented schema**. Good for large volumes of data.
 - **Apache Gremlin**: creates graphs where data is stored as edges and vertices.
 - **Table**: it stores data in **key/value format**. If you're currently using Azure Table storage, you may see some limitations in latency, scaling, throughput, global distribution, index management, low query performance. API for Table overcomes these limitations and it's recommended to migrate your app if you want to use the benefits of Azure Cosmos DB. API for Table only supports [[OLTP]] scenarios.
+
+## Partitions
+
+You have to define partitions to spread the content to all the instances.
+
+You can create logical partition (defined in each item). Azure automatically creates physical partitions, and each physical partition can contain one or more logical partitions.
+
+[[cosmosdb partitions]]
+
+When your system is heavy read, you should define as a partition key one of the field used the most when defining queries.
+
+[[syntetic partition key]]

@@ -2,11 +2,9 @@
 tags: azure, cloud, azure-certifications/az204, azure-cosmos-db
 ---
 
-# Azure Cosmos DB Triggers, Stored Procedures, User-defined functions
+# Azure Cosmos DB Stored Procedures
 
-With Azure Cosmos DB you can use **Stored Procedures, Triggers, and User-Defined Functions**. To call a stored procedure, trigger, or user-defined function, you need to register it. **Stored procedures are registered per collection**, and can operate on any document or an attachment present in that collection.
-
-## Stored procedures
+**Stored procedures are registered per collection**, and can operate on any document or an attachment present in that collection.
 
 **Stored procedures are written using JavaScript**. They can create, update, read, query, and delete items within an Azure Cosmos DB container.
 
@@ -61,4 +59,4 @@ All Azure Cosmos DB operations must complete within a limited amount of time. **
 
 You can implement **transactions** on items within a container by using a stored procedure. JavaScript functions can implement a [[continuation-based model]] to batch or resume execution. The continuation value can be any value of your choice and your applications can then use this value to resume a transaction from a new starting point.
 
-## Trigger
+[[transaction continuation]]

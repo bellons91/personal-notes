@@ -89,7 +89,8 @@ The method requires type to serialize the item to along with an id property, and
 ```cs
 string id = "[id]";
 string accountNumber = "[partition-key]";
-ItemResponse<SalesOrder> response = await container.ReadItemAsync(id, new PartitionKey(accountNumber));
+ItemResponse<SalesOrder> response = await container
+    .ReadItemAsync(id, new PartitionKey(accountNumber));
 ```
 
 ### Query an item
@@ -109,6 +110,10 @@ FeedIterator<SalesOrder> resultSet = container.GetItemQueryIterator<SalesOrder>(
         MaxItemCount = 1
     });
 ```
+
+[[Posso usare anche query LINQ]]
+
+[[Anche con ITERATOR]]
 
 ## Work with stored procedures
 
