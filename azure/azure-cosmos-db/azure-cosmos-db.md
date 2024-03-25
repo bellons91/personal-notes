@@ -63,3 +63,19 @@ You can create logical partition (defined in each item). Azure automatically cre
 When your system is heavy read, you should define as a partition key one of the field used the most when defining queries.
 
 [[syntetic partition key]]
+
+## Change Feed
+
+Change feed in Azure Cosmos DB is a **persistent record of changes to a container in the order they occur**.
+
+Change feed support in Azure Cosmos DB works by listening to an Azure Cosmos DB container for any changes. It then outputs the sorted list of documents that were changed in the order in which they were modified.
+
+**The persisted changes can be processed asynchronously and incrementally**, and the output can be distributed across one or more consumers for parallel processing.
+
+Today, you see all inserts and updates in the change feed. **You can't filter the change feed for a specific type of operation**. Currently change feed **doesn't log delete operations**. As a workaround, you can add a soft marker on the items that are being deleted. For example, you can add an attribute in the item called "deleted," set its value to "true," and then set a time-to-live (TTL) value on the item. Setting the TTL ensures that the item is automatically deleted.
+
+You can work with the Azure Cosmos DB change feed **using either a push model or a pull model**.
+With a push model, the change feed processor pushes work to a client that has business logic for processing this work. However, the complexity in checking for work and storing state for the last processed work is handled within the change feed processor. It is recommended to use the push model because you won't need to worry about polling the change feed for future changes, storing state for the last processed change, and other benefits.
+With a pull model, the client has to pull the work from the server. The client, in this case, not only has business logic for processing work but also storing state for the last processed work, handling load balancing across multiple clients processing work in parallel, and handling errors.
+
+There are two ways you can read from the change feed with a push model: **[[azure-functions]] with Azure Cosmos DB triggers**, and the **change feed processor library**. Azure Functions uses the change feed processor behind the scenes, so these are both similar ways to read the change feed.
