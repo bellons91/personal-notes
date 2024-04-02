@@ -20,7 +20,7 @@ There are several pricing tiers:
 
 - **Basic**: cost-optimized version, just for learning. It provides lower storage and throughput.
 - **Standard**: ideal for most production scenarios. It has more storage and image throughput.
-- **Premium**: it also has *zone-replication* of the registry (the registry is replicated to a minimum of three separate zones in each enabled region), [[content trust]] for image tag signing, and private link with private endpoints to restrict the access to the registry.
+- **Premium**: it also has _zone-replication_ of the registry (the registry is replicated to a minimum of three separate zones in each enabled region), [[content trust]] for image tag signing, and private link with private endpoints to restrict the access to the registry.
 
 **All container images in your registry are encrypted at rest**. Azure automatically encrypts an image before storing it, and decrypts it on-the-fly when you or your applications and services pull the image.
 

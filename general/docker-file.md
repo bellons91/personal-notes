@@ -41,7 +41,7 @@ In particular:
 
 `COPY bin/Release/net6.0/publish/ .`: this command copies the content within the `bin/Release/net6.0/publish` folder to the current directory (`.`, which is now set to `/app`).
 
-`EXPOSE 80`: it opens the port 80 to the external world. When you run a container using this image, you have to ensure that you are accessing this *internal* port.
+`EXPOSE 80`: it opens the port 80 to the external world. When you run a container using this image, you have to ensure that you are accessing this _internal_ port.
 
 `CMD ["dotnet", "MyApp.dll"]`: this is the command to run when the container starts. In this case, we are running the `dotnet` command with the name of the app's [[DLL]].
 

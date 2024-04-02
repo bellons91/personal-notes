@@ -14,14 +14,18 @@ The name must be:
 - with only numbers, letters, hyphens
 - between 3 and 31 char long
 
-```cli
-az cosmosdb create --name <myCosmosDBacct> --resource-group <resource-group-name>
+```bash
+az cosmosdb create
+    --name <myCosmosDBacct>
+    --resource-group <resource-group-name>
 ```
 
 This command returns several info, such as the `documentEndpoint`.
 
 ## Get the primary key
 
-```cli
-az cosmosdb keys list --name <myCosmosDBacct> --resource-group <resource-group-name>
+```bash
+az cosmosdb keys list
+    --name <myCosmosDBacct>
+    --resource-group <resource-group-name>
 ```

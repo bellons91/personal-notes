@@ -10,18 +10,18 @@ This page lists some scripts useful for operating on [[azure-virtual-network]].
 
 With this script you can list the [[azure-virtual-network]] that are associated with your VM:
 
-```cli
-az network nsg list \
-  --resource-group  ID-RESOURCE-GROUP\
-  --query '[].name' \
+```bash
+az network nsg list
+  --resource-group  ID-RESOURCE-GROUP
+  --query '[].name'
   --output tsv
 ```
 
 ## List all rules associated with a Security Groups
 
-```cli
-az network nsg rule list \
-  --resource-group ID-RESOURCE-GROUP \
+```bash
+az network nsg rule list
+  --resource-group ID-RESOURCE-GROUP
   --nsg-name my-vmNSG
 ```
 
@@ -54,19 +54,19 @@ will return
 
 You can return a subset of those fileds by specifying only the fields you need (you can even rename them):
 
-```cli
+```bash
 --query '[].{Name:name, Priority:priority, Port:destinationPortRange, Access:access}'
 ```
 
 ## How to add a security rule on an existing Security Groups
 
-```cli
-az network nsg rule create \
-  --resource-group RESOURCE-GROUP-ID \
-  --nsg-name SECURITY-GROUP-ID \
-  --name RULE-NAME \
-  --protocol tcp \
-  --priority 100 \
-  --destination-port-range 80 \
+```bash
+az network nsg rule create
+  --resource-group RESOURCE-GROUP-ID
+  --nsg-name SECURITY-GROUP-ID
+  --name RULE-NAME
+  --protocol tcp
+  --priority 100
+  --destination-port-range 80
   --access Allow
 ```

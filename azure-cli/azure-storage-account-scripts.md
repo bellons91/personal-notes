@@ -9,14 +9,20 @@ tags: azure, cloud, cli
 
 First you have to create the resource group, if missing:
 
-```powershell
-az group create --location <myLocation> --name az204-blob-rg
+```bash
+az group create
+    --location <myLocation>
+    --name az204-blob-rg
 ```
 
 Then you can create a new Storage Account within that resource group
 
-```powershell
-az storage account create --resource-group az204-blob-rg --name <myStorageAcct> --location <myLocation> --sku Standard_LRS
+```bash
+az storage account create
+    --resource-group az204-blob-rg
+    --name <myStorageAcct>
+    --location <myLocation>
+    --sku Standard_LRS
 ```
 
 This command returns all the info about the newly created storage account:
