@@ -1,8 +1,8 @@
 ---
-tags: azure, cloud, azure-certifications/az900 containers, paas
+tags: az-204, azure, container, aci, docker, azure-certifications/az900 containers, paas
 ---
 
-# Azure Container Instances
+# Azure Container Instances (ACI)
 
 You don't have to manage VMs.
 
