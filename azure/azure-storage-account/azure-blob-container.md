@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, storage, azure-blob-storage
+tags: azure, cloud, az-204, storage, azure-blob-storage
 ---
 
 # Azure Blob Container

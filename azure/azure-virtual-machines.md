@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, virtual-machines, iaas
+tags: azure, cloud, az-900, virtual-machines, iaas
 ---
 
 # Azure Virtual Machines

@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, autoscaling
+tags: azure, cloud, az-204, autoscaling
 ---
 
 # Azure App Service Autoscale

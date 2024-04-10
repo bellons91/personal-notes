@@ -2,7 +2,7 @@
 type: basic-note
 foam_template:
   filepath: "./azure/azure-app-service-plan.md"
-tags: azure, cloud, azure-certifications/az204
+tags: azure, cloud, az-204
 ---
 
 # Azure App Service Plan

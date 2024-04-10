@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, iaas
+tags: azure, cloud, az-900, iaas
 ---
 
 # IaaS - Infrastructure-as-a-Service

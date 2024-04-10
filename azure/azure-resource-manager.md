@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, infrastructure
+tags: azure, cloud, az-900, infrastructure
 ---
 
 # ARM (Azure Resource Manager)

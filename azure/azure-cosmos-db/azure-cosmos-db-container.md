@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, azure-cosmos-db
+tags: azure, cloud, az-204, azure-cosmos-db
 ---
 
 # Azure CosmosDB Container

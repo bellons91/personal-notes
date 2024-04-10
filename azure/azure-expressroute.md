@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 networking, iaas
+tags: azure, cloud, az-900 networking, iaas
 ---
 
 # Azure ExpressRoute

@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 serverless, paas, azure-certifications/az204, azure-functions
+tags: azure, cloud, az-900 serverless, paas, az-204, azure-functions
 ---
 
 # Azure Functions

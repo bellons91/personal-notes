@@ -1,8 +1,5 @@
 ---
-type: basic-note
-foam_template:
-  filepath: "./azure-cli/azure-app-service-scripts.md"
-tags: azure, cloud, cli
+tags: azure, cloud, azure-cli, az-204
 ---
 
 # Azure App Service Scripts

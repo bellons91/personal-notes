@@ -1,5 +1,5 @@
 ---
-tags: azure, azure-certifications/az900, cost-optimization, azure-sql
+tags: azure, az-900, cost-optimization, azure-sql
 ---
 
 # Optimize Azure SQL costs

@@ -1,5 +1,5 @@
 ---
-tags: azure-certifications/az900, authentication, security
+tags: az-900, authentication, security
 ---
 
 # FIDO2 authentication

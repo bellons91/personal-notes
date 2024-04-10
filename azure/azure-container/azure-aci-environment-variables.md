@@ -1,5 +1,5 @@
 ---
-tags: az-204, azure, container, aci, docker, azure-certifications/az900 containers, paas
+tags: az-204, azure, containers, aci, docker, az-900 containers, paas
 ---
 
 # Azure ACI Environment Variables

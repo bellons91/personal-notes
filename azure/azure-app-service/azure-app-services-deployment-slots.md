@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, azure-app-service, deployment-slots
+tags: azure, cloud, az-204, azure-app-services, deployment-slots
 ---
 
 # Azure App Services Deployment Slots

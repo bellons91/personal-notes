@@ -1,5 +1,5 @@
 ---
-tags: az-204, azure, container, acr, docker
+tags: az-204, azure, containers, acr, docker
 ---
 
 # Azure Container Registry (ACR)
@@ -8,7 +8,7 @@ ACR is a registry for [[Docker Containers]].
 
 You can use ACR to manage containerized applications across clusters of hosts, like [[Kubernetes]], [[DC/OS]], and [[Docker Swarm]].
 
-There are Azure services that pull the application content from ACR, such as [[Azure Kubernetes Service (AKS)]], [[azure-app-service]], [[Service Fabric]], and others.
+There are Azure services that pull the application content from ACR, such as [[azure-kubernetes-service]], [[azure-app-service]], [[Service Fabric]], and others.
 
 Developers can push [[Docker Images]] to ACR from a CI pipeline.
 

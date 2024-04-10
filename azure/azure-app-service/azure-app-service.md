@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, paas, azure-certifications/az204
+tags: azure, cloud, az-900, paas, az-204
 ---
 
 # Azure App Service

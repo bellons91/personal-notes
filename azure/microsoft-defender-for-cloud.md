@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, security, aws
+tags: azure, cloud, az-900, security, aws
 ---
 
 # Microsoft Defender for Cloud

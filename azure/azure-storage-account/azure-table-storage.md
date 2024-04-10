@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, azure-certifications/az204, storage
+tags: azure, cloud, az-900, az-204, storage
 ---
 
 # Azure Table Storage

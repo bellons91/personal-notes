@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, authentication
+tags: azure, cloud, az-900, authentication
 ---
 
 # Azure Role-Based Access Control (RBAC)

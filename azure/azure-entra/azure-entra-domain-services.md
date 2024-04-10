@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, authentication, paas
+tags: azure, cloud, az-900, authentication, paas
 ---
 
 # Azure Entra Domain Services

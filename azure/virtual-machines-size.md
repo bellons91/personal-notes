@@ -1,5 +1,5 @@
 ---
-tags: azure, azure-certifications/az900, cost-optimization, virtual-machines
+tags: azure, az-900, cost-optimization, virtual-machines
 ---
 
 # Virtual Machines size

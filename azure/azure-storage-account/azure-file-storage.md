@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, storage
+tags: azure, cloud, az-900, storage
 ---
 
 # Azure Files

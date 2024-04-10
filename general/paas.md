@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, paas
+tags: azure, cloud, az-900, paas
 ---
 
 # PaaS - Platform-as-a-Service

@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, azure-cli, acr, container
+tags: azure, cloud, az-204, azure-cli, acr, containers
 ---
 
 # Operations on ACI with Cloud CLI

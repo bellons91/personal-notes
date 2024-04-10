@@ -2,7 +2,7 @@
 type: basic-note
 foam_template:
   filepath: "./azure/$FOAM_SLUG.md"
-tags: azure, cloud, azure-certifications/az204
+tags: azure, cloud, az-204
 ---
 
 # $FOAM_TITLE

@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, authentication, authorization, azure-app-services
+tags: azure, cloud, az-204, authentication, authorization, azure-app-services
 ---
 
 # Azure App Service Authentication and Authorization

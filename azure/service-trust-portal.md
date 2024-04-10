@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, governance
+tags: azure, cloud, az-900, governance
 ---
 
 # Service Trust portal

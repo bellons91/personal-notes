@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, azure-cli
+tags: azure, cloud, az-900, azure-cli
 ---
 
 # Operations on VM with Cloud CLI

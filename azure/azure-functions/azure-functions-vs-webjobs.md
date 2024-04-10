@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, serverless, azure-functions, azure-logic-apps
+tags: azure, cloud, az-204, serverless, azure-functions, azure-logic-apps
 ---
 
 # Azure Functions vs WebJobs

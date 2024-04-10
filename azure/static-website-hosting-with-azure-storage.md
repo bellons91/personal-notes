@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, storage, azure-storage-account
+tags: azure, cloud, az-204, storage, azure-storage-account
 ---
 
 # Static website hosting with Azure Storage

@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900 networking, paas
+tags: azure, cloud, az-900 networking, paas
 ---
 
 # Azure DNS

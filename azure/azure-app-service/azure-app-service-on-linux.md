@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, linux
+tags: azure, cloud, az-204, linux
 ---
 
 # Azure App Service on Linux

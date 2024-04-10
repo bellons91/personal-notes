@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204,
+tags: azure, cloud, az-204,
 ---
 
 # Multitenant App Service networking

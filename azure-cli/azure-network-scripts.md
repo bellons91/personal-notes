@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az900, azure-cli, networking
+tags: azure, cloud, az-900, azure-cli, networking
 ---
 
 # Operations on Azure Virtual Network with Cloud CLI

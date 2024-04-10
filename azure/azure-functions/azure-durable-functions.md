@@ -1,5 +1,5 @@
 ---
-tags: azure, cloud, azure-certifications/az204, serverless, azure-functions, azure-durable-functions
+tags: azure, cloud, az-204, serverless, azure-functions, azure-durable-functions
 ---
 
 # Azure Durable Functions

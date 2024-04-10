@@ -1,5 +1,5 @@
 ---
-tags: az-204, azure, container, acr, docker
+tags: az-204, azure, containers, acr, docker
 ---
 
 # ACR Tasks
