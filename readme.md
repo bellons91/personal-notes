@@ -17,7 +17,6 @@ The repository can be found on [GitHub](https://github.com/bellons91/personal-no
 - **SIM-jacking**: vulnerability that uses SIMs and SMS content;
 - **Hammering**: hacking technique. Hackers send continuous push notifications until the victim, annoyed by these notifications, accepts one and gives permissions to the intruder;
 - **Adversary-in-the-middle**: deceive users;
-- **DAPR**: used for Sidecar architecture. The main application communicates with the sidecar via GRPC or HTTP;
 - **Fitness Functions**: functions that check the -ilities of the architecture. You use metrics and monitors;
 - **ArchUnitNET**: library for testing the code architecture. You can validate the modules dependencies;
 - **JIT** (Just-in-time compilation): compiles the code on the fly; it compiles the code that you are going to execute;
