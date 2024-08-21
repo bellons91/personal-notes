@@ -109,3 +109,58 @@ SELECT
 FROM
   TRIANGLES
 ```
+
+## Subquery e referenze
+
+Nel FROM posso definire delle sottoquery, dare un nome alla tabella restituita, e referenziarla al di fuori della query stessa.
+
+```sql
+SELECT
+  TOP 1 MAX(VAL),
+  COUNT(*)
+FROM
+  (
+    SELECT
+      months * salary AS VAL
+    FROM
+      Employee
+  ) s
+GROUP BY
+  s.VAL
+ORDER BY
+  VAL DESC
+```
+
+Qui la subquery viene chiamata `s`, e si puó referenziare il suo campo VAL.
+**E' necessario dare un nome alla subquery**.
+
+## GroupBy e OrderBy
+
+Puoi usare OrderBY per ordinare in base a quello che c'è in GroupBy.
+
+Si ordina in base alla posizione del campo, quindi
+
+```sql
+Select *
+from occupations
+group by occupation 
+order by 1
+```
+
+## Cast a tipo
+
+Usa l'operatore `CAST`, specificando anche il tipo di destinazione.
+
+```sql
+CAST Salary AS integer
+```
+
+## Replace sottostringa
+
+Usa l'operatore `REPLACE`, specificando la sottostringa da cercare e quella con cui sostituirla
+
+```sql
+REPLACE(Salary, '0', '')
+```
+
+Nota: la stringa di partenza non deve esser per forza una stringa. Puó anche essere un numero (come Salary), e funziona lo stesso.

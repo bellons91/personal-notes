@@ -26,5 +26,7 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.markdownlint": "explicit"
-  }
+  },
+  "foam.completion.useAlias": "whenPathDiffersFromTitle"
+
 }
