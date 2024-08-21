@@ -63,7 +63,24 @@ Not A Triangle: The given values of A, B, and C don&#x27;t form a triangle.</p><
     <span class="token keyword">ELSE</span> <span class="token string">&quot;Scalene&quot;</span>
   <span class="token keyword">END</span>
 <span class="token keyword">FROM</span>
-  TRIANGLES</code></pre></div></div></main><div class="topic-layout__right flex-shrink-0 p-5 hover:shadow-md"><div title="Show Graph Visualisation" aria-label="Show Graph Visualisation" class="graph-button"><span>
+  TRIANGLES</code></pre></div><h2 id="Subquery-e-referenze">Subquery e referenze</h2><p>Nel FROM posso definire delle sottoquery, dare un nome alla tabella restituita, e referenziarla al di fuori della query stessa.</p><div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span>
+  <span class="token keyword">TOP</span> <span class="token number">1</span> <span class="token function">MAX</span><span class="token punctuation">(</span>VAL<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span>
+  <span class="token punctuation">(</span>
+    <span class="token keyword">SELECT</span>
+      months <span class="token operator">*</span> salary <span class="token keyword">AS</span> VAL
+    <span class="token keyword">FROM</span>
+      Employee
+  <span class="token punctuation">)</span> s
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span>
+  s<span class="token punctuation">.</span>VAL
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span>
+  VAL <span class="token keyword">DESC</span></code></pre></div><p>Qui la subquery viene chiamata <code>s</code>, e si puó referenziare il suo campo VAL.
+<strong>E&#x27; necessario dare un nome alla subquery</strong>.</p><h2 id="GroupBy-e-OrderBy">GroupBy e OrderBy</h2><p>Puoi usare OrderBY per ordinare in base a quello che c&#x27;è in GroupBy.</p><p>Si ordina in base alla posizione del campo, quindi</p><div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">Select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> occupations
+<span class="token keyword">group</span> <span class="token keyword">by</span> occupation 
+<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token number">1</span></code></pre></div><h2 id="Cast-a-tipo">Cast a tipo</h2><p>Usa l&#x27;operatore <code>CAST</code>, specificando anche il tipo di destinazione.</p><div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql">CAST Salary <span class="token keyword">AS</span> <span class="token keyword">integer</span></code></pre></div><h2 id="Replace-sottostringa">Replace sottostringa</h2><p>Usa l&#x27;operatore <code>REPLACE</code>, specificando la sottostringa da cercare e quella con cui sostituirla</p><div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">REPLACE</span><span class="token punctuation">(</span>Salary<span class="token punctuation">,</span> <span class="token string">&#x27;0&#x27;</span><span class="token punctuation">,</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">)</span></code></pre></div><p>Nota: la stringa di partenza non deve esser per forza una stringa. Puó anche essere un numero (come Salary), e funziona lo stesso.</p></div></main><div class="topic-layout__right flex-shrink-0 p-5 hover:shadow-md"><div title="Show Graph Visualisation" aria-label="Show Graph Visualisation" class="graph-button"><span>
 <svg
   t="1607341341241"
   class="icon"
