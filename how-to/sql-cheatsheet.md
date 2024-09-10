@@ -164,3 +164,27 @@ REPLACE(Salary, '0', '')
 ```
 
 Nota: la stringa di partenza non deve esser per forza una stringa. Puó anche essere un numero (come Salary), e funziona lo stesso.
+
+## Arrotondare fino a una determinata cifra decimale
+
+Se voglio arrotondare fino alla 4 cifra decimale, posso usare `CAST` specificando che converto il numero in `NUMERIC(a, b)`, dove `a` é il numero totale di cifre, mentre `b` é il numero di cifre decimali disponibili.
+
+```sql
+CAST(123,4567890 AS NUMERIC(12, 3)) # diventa 123,456
+```
+
+## Ottenere il valore in percentile di una query
+
+Per ottenere il valore in un determinato percentile uso la funziona `percentile_cont`.
+
+```sql
+SELECT
+  DISTINCT percentile_cont(0.5) WITHIN GROUP (
+    ORDER BY
+      LAT_N
+  ) OVER()
+FROM
+  STATION
+```
+
+La query sopra prende tutti i valori di LAT_N presenti nella tabella Station, ne fa una partizione in base ai valori, poi prende il valore in percentile 0.5 e, tramite DISTINCT, ne restituisce un singolo valore.
