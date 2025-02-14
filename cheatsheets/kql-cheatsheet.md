@@ -44,6 +44,19 @@ extend  lastpart_ = split( operation_Name, "/")[-1]
 
 You can access the last part using  _-1_.
 
+## Summarize by timestamp and occurrencies count
+
+Use the `summarize` function to group by count, grouped by a specific element (in this case, timestamp grouped in buckets of 30 mins)
+
+```kql
+traces
+| where message startswith "Exception: bla bla bla"
+| summarize count() by bin(timestamp, 1h)
+| render timechart 
+```
+
+Use the `bin` function to group by buckets.
+
 ## Visualize a pie chart
 
 After a `summarize` over a field, use
